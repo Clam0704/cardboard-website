@@ -3,7 +3,7 @@
 
 const changingText = document.getElementById('nav-title');
 
-let currentFont = 1;
+var currentFont = 1;
 
 function fadeOutAndChangeFont() {
     changingText.style.animation = 'fade-out-opacity 0.3s forwards';

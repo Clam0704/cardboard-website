@@ -8,14 +8,17 @@ body, ul {
 
 /* Style the navigation bar */
 .custom-nav {
-    background-color: transparent; /* Set the background color of the navigation bar */
+    background-color: black; /* Set the initial background color to black */
+    animation: fade-background 3s infinite alternate;
     color: #fff; /* Set the text color to white */
-    
+    position: sticky;
+    top: 0;
     /* Use flexbox to horizontally spread the navigation links */
     display: flex;
     justify-content: space-between;
     padding-right: 3vh;
     height: 1vh+1vw;
+    z-index: 2;
 }
 
 nav {
@@ -44,6 +47,7 @@ nav a {
     color: #fff; /* Set the link text color to white */
     padding-left: 2vw;
     font-size: 2vw;
+    font-family: Verdana;
 }
 
 nav a:hover {
@@ -67,14 +71,7 @@ h1 {
 }
 
 .caption {
-    padding-left: 2vw
-}
 
-#video-container {
-    display:inline-flex;
-    padding-top: 2vw;
-    justify-content: center;
-    align-items: flex-start;
 }
 
 #profile {
@@ -89,21 +86,22 @@ h1 {
 #background-video {
     top: 0;
     left: 0;
-    width: 98%;
-    height: 98%;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     z-index: -1; /* Place the video below other elements */
     opacity: 1;
-    padding: 1vw;
 }
 
 
 .video-component {
-    display: inline-block;
-    padding-left: 30vw;
-    padding-right: 30vw;
+    display: inline-flex;
+    padding-left: calc(0.5vh + 0.5vw);
+    padding-right: calc(0.5vh + 0.5vw);
     width: 50vw;
-    height: 15vw;
+    flex-direction: column;
+    word-break: break-word;
+    align-items: flex-start;
 }
 
 
@@ -111,7 +109,10 @@ h1 {
     display: flex;
     overflow-x: auto; /* Enable horizontal scrolling */
     white-space: nowrap; /* Prevent videos from wrapping to new lines */
-    height: 35vw;
+    scroll-behavior: smooth;
+    height: 42vw;
+    width: 100vw;
+    z-index: 0;
 }
 
 .backgroundContent {
@@ -129,7 +130,7 @@ h1 {
         background-color: black;
     }
     to {
-        background-color: rgb(40, 0, 0);
+        background-color: rgb(50, 0, 0);
     }
 }
 @keyframes fade-in-opacity {
@@ -170,15 +171,14 @@ h1 {
 }
 
 .overlayMain {
-    position:absolute;
-    padding-top: 6vw;
-    font-size: 6vw;
+    padding-top: 2.5vw;
+    font-size: 7vw;
     font-family: Verdana;
     font-weight: bold;
-    object-fit: cover;
     text-shadow: 0 0 2vw #000000;
     opacity: 0.7;
     text-align: center;
+    z-index: 1;
 }
 
 .overlaySub {
@@ -206,9 +206,15 @@ h1 {
 
 .embedDesc {
     font-size: 1.5vw;
+    width: 100%;
+    white-space: normal; 
+    overflow-wrap: break-word; 
+    word-wrap: break-word;
+    white-space: normal; 
 }
 
 iframe {
     width: 30vw; 
     height: 20vw;
 }
+
