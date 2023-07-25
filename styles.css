@@ -14,13 +14,12 @@ body, ul {
     /* Use flexbox to horizontally spread the navigation links */
     display: flex;
     justify-content: space-between;
-    font-size: 2.5rem;
-    padding-right: 3.125rem;
-    height: 5rem;
+    padding-right: 3vh;
+    height: 1vh+1vw;
 }
 
 nav {
-    padding-top: 20px;
+    padding-top: 2.5vw;
 }
 
 figure {
@@ -43,8 +42,8 @@ nav li {
 nav a {
     text-decoration: none; /* Remove the default underline from the links */
     color: #fff; /* Set the link text color to white */
-    padding-left: 35px;
-    font-size: 1.5vw;
+    padding-left: 2vw;
+    font-size: 2vw;
 }
 
 nav a:hover {
@@ -59,21 +58,21 @@ nav a:hover {
 
 h2 {
     text-align: center;
-    font-size: 40px;
+    font-size: 4vw;
 }
 
 h1 {
-    padding-left: 30px;
-    font-size: 1.5vw; 
+    padding-left: 3vw;
+    font-size: 3vw;
 }
 
 .caption {
-    padding-left: 20px
+    padding-left: 2vw
 }
 
 #video-container {
     display:inline-flex;
-    padding-top: 20px;
+    padding-top: 2vw;
     justify-content: center;
     align-items: flex-start;
 }
@@ -95,16 +94,16 @@ h1 {
     object-fit: cover;
     z-index: -1; /* Place the video below other elements */
     opacity: 1;
-    padding: 1rem;
+    padding: 1vw;
 }
 
 
 .video-component {
     display: inline-block;
-    padding-left: 30px;
-    padding-right: 30px;
-    width: 50rem;
-    height: 15rem;
+    padding-left: 30vw;
+    padding-right: 30vw;
+    width: 50vw;
+    height: 15vw;
 }
 
 
@@ -112,7 +111,7 @@ h1 {
     display: flex;
     overflow-x: auto; /* Enable horizontal scrolling */
     white-space: nowrap; /* Prevent videos from wrapping to new lines */
-    height: 35rem;
+    height: 35vw;
 }
 
 .backgroundContent {
@@ -172,12 +171,12 @@ h1 {
 
 .overlayMain {
     position:absolute;
-    padding-top: 6vh;
-    font-size: 12vh;
+    padding-top: 6vw;
+    font-size: 6vw;
     font-family: Verdana;
     font-weight: bold;
     object-fit: cover;
-    text-shadow: 0 0 2rem #000000;
+    text-shadow: 0 0 2vw #000000;
     opacity: 0.7;
     text-align: center;
 }
@@ -188,16 +187,16 @@ h1 {
     font-family: Verdana;
     font-weight: bold;
     object-fit: cover;
-    text-shadow: 0 0 2rem #000000;
+    text-shadow: 0 0 2vw #000000;
     opacity: 0.7;
     grid-area: 1 / 1;
     justify-content: center; /* Vertically center the text */
     align-items: center; 
-    padding: 1rem;
+    padding: 1vw;
 }
 
 .embedTitle {
-    font-size: 2rem;
+    font-size: 2vw;
     width: 100%;
     white-space: normal; 
     overflow-wrap: break-word; 
@@ -206,10 +205,10 @@ h1 {
 }
 
 .embedDesc {
-    font-size: 1.5rem;
+    font-size: 1.5vw;
 }
 
 iframe {
-    width: 30rem; 
-    height: 20rem;
+    width: 30vw; 
+    height: 20vw;
 }
