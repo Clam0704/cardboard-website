@@ -1,0 +1,215 @@
+/* Reset default margin and padding for the entire page */
+body, ul {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: #fff;
+}
+
+/* Style the navigation bar */
+.custom-nav {
+    background-color: transparent; /* Set the background color of the navigation bar */
+    color: #fff; /* Set the text color to white */
+    
+    /* Use flexbox to horizontally spread the navigation links */
+    display: flex;
+    justify-content: space-between;
+    font-size: 2.5rem;
+    padding-right: 3.125rem;
+    height: 5rem;
+}
+
+nav {
+    padding-top: 20px;
+}
+
+figure {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Style the navigation links */
+nav ul {
+    list-style: none; /* Remove the default bullet points from the list */
+}
+
+nav li {
+    /* Remove inline-block display property for list items */
+    display: block;
+}
+
+nav a {
+    text-decoration: none; /* Remove the default underline from the links */
+    color: #fff; /* Set the link text color to white */
+    padding-left: 35px;
+    font-size: 1.5vw;
+}
+
+nav a:hover {
+    text-decoration: underline; /* Add underline on hover to indicate interactivity */
+}
+
+#profile_pic {
+    width: 300px; /* Adjust the width and height as needed */
+    height: 300px;
+    border-radius: 50%; /* Crop the image into a circle */
+}
+
+h2 {
+    text-align: center;
+    font-size: 40px;
+}
+
+h1 {
+    padding-left: 30px;
+    font-size: 1.5vw; 
+}
+
+.caption {
+    padding-left: 20px
+}
+
+#video-container {
+    display:inline-flex;
+    padding-top: 20px;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    vertical-align: top;
+    display: inline-block;
+    width: 120px;
+}
+
+#background-video {
+    top: 0;
+    left: 0;
+    width: 98%;
+    height: 98%;
+    object-fit: cover;
+    z-index: -1; /* Place the video below other elements */
+    opacity: 1;
+    padding: 1rem;
+}
+
+
+.video-component {
+    display: inline-block;
+    padding-left: 30px;
+    padding-right: 30px;
+    width: 50rem;
+    height: 15rem;
+}
+
+
+#gallery {
+    display: flex;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    white-space: nowrap; /* Prevent videos from wrapping to new lines */
+    height: 35rem;
+}
+
+.backgroundContent {
+    /* Set the content's width and height as needed */
+    width: 100%;
+    height: 100%;
+    /* Add other styles for the content container if necessary */
+    background-color: black; /* Set the initial background color to black */
+    animation: fade-background 3s infinite alternate;
+}
+
+/* Animation */
+@keyframes fade-background {
+    from {
+        background-color: black;
+    }
+    to {
+        background-color: rgb(40, 0, 0);
+    }
+}
+@keyframes fade-in-opacity {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fade-out-opacity {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes fade-in-opacity-overlay-main {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 0.7;
+    }
+}
+
+
+@keyframes fade-out-opacity-overlay-main {
+    from {
+        opacity: 0.7;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+.overlayMain {
+    position:absolute;
+    padding-top: 6vh;
+    font-size: 12vh;
+    font-family: Verdana;
+    font-weight: bold;
+    object-fit: cover;
+    text-shadow: 0 0 2rem #000000;
+    opacity: 0.7;
+    text-align: center;
+}
+
+.overlaySub {
+    display: flex;
+    font-size: 100%;
+    font-family: Verdana;
+    font-weight: bold;
+    object-fit: cover;
+    text-shadow: 0 0 2rem #000000;
+    opacity: 0.7;
+    grid-area: 1 / 1;
+    justify-content: center; /* Vertically center the text */
+    align-items: center; 
+    padding: 1rem;
+}
+
+.embedTitle {
+    font-size: 2rem;
+    width: 100%;
+    white-space: normal; 
+    overflow-wrap: break-word; 
+    word-wrap: break-word;
+    white-space: normal; 
+}
+
+.embedDesc {
+    font-size: 1.5rem;
+}
+
+iframe {
+    width: 30rem; 
+    height: 20rem;
+}
