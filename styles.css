@@ -7,6 +7,19 @@ body, ul {
 }
 
 /* Style the navigation bar */
+.custom-nav-home {
+    background-color: black; /* Set the initial background color to black */
+    animation: fade-background 3s infinite alternate;
+    color: #fff; /* Set the text color to white */
+    
+    /* Use flexbox to horizontally spread the navigation links */
+    display: flex;
+    justify-content: space-between;
+    padding-right: 3vh;
+    height: sum(1vh+1vw);
+    z-index: 2;
+}
+
 .custom-nav {
     background-color: black; /* Set the initial background color to black */
     animation: fade-background 3s infinite alternate;
@@ -17,8 +30,8 @@ body, ul {
     display: flex;
     justify-content: space-between;
     padding-right: 3vh;
-    height: sum(1vh+1vw);
-    z-index: 2;
+    z-index: 3;
+    height: 6vw;
 }
 
 nav {
@@ -72,13 +85,25 @@ h2 {
 h1 {
     padding-left: 3vw;
     font-size: 3vw;
+    font-family: Verdana;
 }
 
 .video-collection {
     display: flex;
     flex-wrap: wrap;
-    gap: 2vw;
-    padding-left: calc(1vh+1vw);
+    gap: 3.5vw;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    justify-content: center;
+}
+
+.video-collection-item {
+    flex: 0 0 calc(45%);
+    flex-direction: column;
+    word-break: break-word;
+    align-items: flex-start;
+    padding-bottom: calc(3vw + 2vh);
+    justify-content: flex-start;
 }
 
 #profile {
@@ -204,11 +229,9 @@ h1 {
 
 .embedTitle {
     font-size: 2vw;
-    width: 100%;
     white-space: normal; 
     overflow-wrap: break-word; 
     word-wrap: break-word;
-    white-space: normal; 
 }
 
 .embedDesc {
@@ -221,7 +244,7 @@ h1 {
 }
 
 iframe {
-    width: 30vw; 
-    height: 20vw;
+    width: 45vw; 
+    height: 25vw;
 }
 
