@@ -17,7 +17,7 @@ body, ul {
     display: flex;
     justify-content: space-between;
     padding-right: 3vh;
-    height: 1vh+1vw;
+    height: sum(1vh+1vw);
     z-index: 2;
 }
 
@@ -51,7 +51,11 @@ nav a {
 }
 
 nav a:hover {
-    text-decoration: underline; /* Add underline on hover to indicate interactivity */
+    font-style: italic; /* Add underline on hover to indicate interactivity */
+}
+
+.current:hover {
+    font-style:normal;
 }
 
 #profile_pic {
@@ -70,8 +74,11 @@ h1 {
     font-size: 3vw;
 }
 
-.caption {
-
+.video-collection {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2vw;
+    padding-left: calc(1vh+1vw);
 }
 
 #profile {
