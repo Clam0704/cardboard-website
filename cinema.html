@@ -20,7 +20,7 @@
     </div>
     <div>
         <div style="display: flex; padding-top: calc(0.5vh + 0.5vw);">
-            <video class="cinemaVideo" id="videoPlayer" autoplay loop muted>
+            <video class="cinemaVideo" id="videoPlayer" autoplay muted>
                 <!-- Include the video files in different formats -->
                 <source src="/assets/cardboard_back_vid_2.mp4" type="video/mp4">
                 <!-- Add more source elements for other formats if needed -->
@@ -28,20 +28,20 @@
             </video>
             <div class="video-collection-cinema-wrapper">
                 <div class="video-collection-cinema">
-                    <div class="thumbnail" onclick="changeMainVideo('assets/MID OCEAN .mp4')">
+                    <div class="thumbnail" onclick="changeMainVideo(0)">
                         <img src="assets/MID OCEAN.jpg" alt="Video 1">
                     </div>
-                    <div class="thumbnail" onclick="changeMainVideo('assets/Two Dangers THE WARNINGS.mp4')">
+                    <div class="thumbnail" onclick="changeMainVideo(1)">
                         <img src="assets/Two Dangers THE WARNINGS.jpg" alt="Video 2">
                     </div>
-                    <div class="thumbnail" onclick="changeMainVideo('assets/Abstrkt Replace Mode.mp4')">
-                        <img src="assets/Abstrkt Replace Mode.jpg" alt="Video 2">
+                    <div class="thumbnail" onclick="changeMainVideo(2)">
+                        <img src="assets/Abstrkt Replace Mode.jpg" alt="Video 3">
                     </div>
-                    <div class="thumbnail" onclick="changeMainVideo('video2.mp4')">
-                        <img src="assets/Abstrkt Replace Mode.webp" alt="Video 2">
+                    <div class="thumbnail" onclick="changeMainVideo(2)">
+                        <img src="assets/Abstrkt Replace Mode.webp" alt="Video 4">
                     </div>
-                    <div class="thumbnail" onclick="changeMainVideo('video2.mp4')">
-                        <img src="assets/Abstrkt Replace Mode.webp" alt="Video 2">
+                    <div class="thumbnail" onclick="changeMainVideo(2)">
+                        <img src="assets/Abstrkt Replace Mode.webp" alt="Video 5">
                     </div>
                 </div>
             </div>
