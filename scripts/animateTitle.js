@@ -19,6 +19,22 @@ function changeFont() {
     while (randVal == currentFont) {
         randVal = Math.floor(Math.random() * fonts.length)
     }
+
+    let randWeight = Math.floor(Math.random() * 3)
+    if (randWeight == 0) {
+        changingText.style.fontWeight = 'bold';
+    } else {
+        changingText.style.fontWeight = 'normal';
+    }
+
+    let randStyle = Math.floor(Math.random() * 3)
+    if (randStyle == 0) {
+        changingText.style.fontStyle = 'italic';
+    } else {
+        changingText.style.fontStyle = 'normal';
+    }
+
+
     currentFont = randVal;
     changingText.style.fontFamily = fonts[randVal];
     changingText.style.animation = 'fade-in-opacity 0.3s forwards'; // Fade the text back in with the new font

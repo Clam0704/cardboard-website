@@ -6,44 +6,30 @@ body, ul {
     color: #fff;
 }
 
-/* Style the navigation bar */
-.custom-nav-home {
-    background-color: black; /* Set the initial background color to black */
-    animation: fade-background 3s infinite alternate;
-    color: #fff; /* Set the text color to white */
-    
-    /* Use flexbox to horizontally spread the navigation links */
-    display: flex;
-    justify-content: space-between;
-    padding-right: 3vh;
-    height: sum(1vh+1vw);
-    z-index: 2;
-}
-
-.custom-nav {
-    background-color: black; /* Set the initial background color to black */
-    animation: fade-background 3s infinite alternate;
-    color: #fff; /* Set the text color to white */
-    position: sticky;
-    top: 0;
-    /* Use flexbox to horizontally spread the navigation links */
-    display: flex;
-    justify-content: space-between;
-    padding-right: 3vh;
-    z-index: 3;
-    height: 6vw;
-}
-
-nav {
-    padding-top: 2.5vw;
-}
-
 figure {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+h1 {
+    padding-left: 3vw;
+    font-size: 3vw;
+    font-family: Verdana;
+}
+
+h2 {
+    text-align: center;
+    font-size: 4vw;
+}
+
+iframe {
+    width: 45vw; 
+    height: 25vw;
+}
+nav {
+    padding-top: 2.5vw;
+}
 
 /* Style the navigation links */
 nav ul {
@@ -67,25 +53,139 @@ nav a:hover {
     font-style: italic; /* Add underline on hover to indicate interactivity */
 }
 
+.backgroundContent {
+    /* Set the content's width and height as needed */
+    width: 100%;
+    height: 100%;
+    /* Add other styles for the content container if necessary */
+    background-color: black; /* Set the initial background color to black */
+    animation: fade-background 3s infinite alternate;
+}
+
+.cinemaVideo {
+    width:78vw;
+    height: 85vh;
+    z-index: -1; /* Place the video below other elements */
+    opacity: 1;
+    display: flex;
+    justify-content: center; /* Horizontally center the video */
+    top: 10%;
+    padding-bottom: calc(0.5vh + 0.5vw);
+    padding-left: calc(0.5vh + 0.5vw);
+    padding-right: calc(0.5vh + 0.5vw);
+}
+
+/* Hide controls when in fullscreen mode */
+.cinemaVideo::-webkit-media-controls {
+    display: none;
+  }
+  
+/* Show controls when not in fullscreen mode */
+.cinemaVideo:not(:-webkit-full-screen)::-webkit-media-controls {
+    display: inherit;
+}
+
 .current:hover {
     font-style:normal;
 }
 
-#profile_pic {
-    width: 300px; /* Adjust the width and height as needed */
-    height: 300px;
-    border-radius: 50%; /* Crop the image into a circle */
+.custom-nav {
+    background-color: black; /* Set the initial background color to black */
+    animation: fade-background 3s infinite alternate;
+    color: #fff; /* Set the text color to white */
+    position:sticky;
+    top: 0;
+    /* Use flexbox to horizontally spread the navigation links */
+    display: flex;
+    justify-content: space-between;
+    padding-right: 3vh;
+    z-index: 3;
+    height: 6vw;
 }
 
-h2 {
-    text-align: center;
-    font-size: 4vw;
+/* Style the navigation bar */
+.custom-nav-home {
+    background-color: black; /* Set the initial background color to black */
+    animation: fade-background 3s infinite alternate;
+    color: #fff; /* Set the text color to white */
+    position: sticky;
+    top: 0;
+    /* Use flexbox to horizontally spread the navigation links */
+    display: flex;
+    justify-content: space-between;
+    padding-right: 3vh;
+    height: sum(1vh+1vw);
+    z-index: 2;
 }
 
-h1 {
-    padding-left: 3vw;
-    font-size: 3vw;
+.embedDesc {
+    font-size: 1.5vw;
+    width: 100%;
+    white-space: normal; 
+    overflow-wrap: break-word; 
+    word-wrap: break-word;
+    white-space: normal; 
     font-family: Verdana;
+}
+
+.embedTitle {
+    font-size: 2vw;
+    white-space: normal; 
+    overflow-wrap: break-word; 
+    word-wrap: break-word;
+    font-family: Verdana;
+}
+
+.fullscreen-button {
+    top: 91vh;
+    left: 75vw;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 0.5vh 1.5vh;
+
+    cursor: pointer;
+    position:absolute;
+    font-size: 3rem
+}
+
+.overlayMain {
+    padding-top: 2.5vw;
+    font-size: 7vw;
+    font-family: Verdana;
+    font-weight: bold;
+    text-shadow: 0 0 2vw #000000;
+    opacity: 0.7;
+    text-align: center;
+    z-index: 1;
+}
+
+.overlaySub {
+    display: flex;
+    font-size: 100%;
+    font-family: Verdana;
+    font-weight: bold;
+    object-fit: cover;
+    text-shadow: 0 0 2vw #000000;
+    opacity: 0.7;
+    grid-area: 1 / 1;
+    justify-content: center; /* Vertically center the text */
+    align-items: center; 
+    padding: 1vw;
+}
+
+.thumbnail {
+    flex-direction: column;
+    word-break: break-word;
+    align-items: flex-start;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-top: 2vh;
+}
+
+.thumbnail img {
+    width: 17vw;
+    height: 18vh;
 }
 
 .video-collection {
@@ -97,6 +197,33 @@ h1 {
     justify-content: center;
 }
 
+.video-collection-cinema {
+    padding-bottom: 2vh;
+}
+
+.video-collection-cinema-wrapper {
+    padding-left: 1vw;
+    padding-right: 1vw;
+    flex-wrap: wrap;
+    width: 17.5vw;
+    height: 43vw;
+    background-color: #000000;
+    align-self: flex-start;
+    display: flex;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    white-space: nowrap; /* Prevent videos from wrapping to new lines */
+    scroll-behavior: smooth;
+}
+
+.video-collection-cinema-item {
+    flex: 0 0 calc(15%);
+    flex-direction: column;
+    word-break: break-word;
+    align-items: flex-start;
+    padding-bottom: calc(3vw + 2vh);
+    justify-content: flex-start;
+}
+
 .video-collection-item {
     flex: 0 0 calc(45%);
     flex-direction: column;
@@ -104,6 +231,24 @@ h1 {
     align-items: flex-start;
     padding-bottom: calc(3vw + 2vh);
     justify-content: flex-start;
+}
+
+.video-component {
+    display: inline-flex;
+    padding-left: calc(0.5vh + 0.5vw);
+    padding-right: calc(0.5vh + 0.5vw);
+    width: 50vw;
+    flex-direction: column;
+    word-break: break-word;
+    align-items: flex-start;
+}
+
+
+
+#profile_pic {
+    width: 300px; /* Adjust the width and height as needed */
+    height: 300px;
+    border-radius: 50%; /* Crop the image into a circle */
 }
 
 #profile {
@@ -125,18 +270,6 @@ h1 {
     opacity: 1;
 }
 
-
-.video-component {
-    display: inline-flex;
-    padding-left: calc(0.5vh + 0.5vw);
-    padding-right: calc(0.5vh + 0.5vw);
-    width: 50vw;
-    flex-direction: column;
-    word-break: break-word;
-    align-items: flex-start;
-}
-
-
 #gallery {
     display: flex;
     overflow-x: auto; /* Enable horizontal scrolling */
@@ -145,15 +278,6 @@ h1 {
     height: 42vw;
     width: 100vw;
     z-index: 0;
-}
-
-.backgroundContent {
-    /* Set the content's width and height as needed */
-    width: 100%;
-    height: 100%;
-    /* Add other styles for the content container if necessary */
-    background-color: black; /* Set the initial background color to black */
-    animation: fade-background 3s infinite alternate;
 }
 
 /* Animation */
@@ -201,50 +325,3 @@ h1 {
         opacity: 0;
     }
 }
-
-.overlayMain {
-    padding-top: 2.5vw;
-    font-size: 7vw;
-    font-family: Verdana;
-    font-weight: bold;
-    text-shadow: 0 0 2vw #000000;
-    opacity: 0.7;
-    text-align: center;
-    z-index: 1;
-}
-
-.overlaySub {
-    display: flex;
-    font-size: 100%;
-    font-family: Verdana;
-    font-weight: bold;
-    object-fit: cover;
-    text-shadow: 0 0 2vw #000000;
-    opacity: 0.7;
-    grid-area: 1 / 1;
-    justify-content: center; /* Vertically center the text */
-    align-items: center; 
-    padding: 1vw;
-}
-
-.embedTitle {
-    font-size: 2vw;
-    white-space: normal; 
-    overflow-wrap: break-word; 
-    word-wrap: break-word;
-}
-
-.embedDesc {
-    font-size: 1.5vw;
-    width: 100%;
-    white-space: normal; 
-    overflow-wrap: break-word; 
-    word-wrap: break-word;
-    white-space: normal; 
-}
-
-iframe {
-    width: 45vw; 
-    height: 25vw;
-}
-
