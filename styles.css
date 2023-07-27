@@ -28,7 +28,7 @@ iframe {
     height: 25vw;
 }
 nav {
-    padding-top: 2.5vw;
+    padding-top: 2vw;
 }
 
 /* Style the navigation links */
@@ -64,7 +64,6 @@ nav a:hover {
 
 .cinemaVideo {
     width:78vw;
-    height: 85vh;
     z-index: -1; /* Place the video below other elements */
     opacity: 1;
     display: flex;
@@ -177,15 +176,15 @@ nav a:hover {
 .thumbnail {
     flex-direction: column;
     word-break: break-word;
-    align-items: flex-start;
-    justify-content: flex-start;
-    align-items: flex-start;
-    padding-top: 2vh;
+    align-items: center;
+    justify-self: center;
+    padding-top: 1.9vw;
 }
 
 .thumbnail img {
-    width: 17vw;
-    height: 18vh;
+    width: 16.4vw;
+    height: 10vw;
+    border-radius: calc(0.5vw + 0.5vh);
 }
 
 .video-collection {
@@ -198,22 +197,21 @@ nav a:hover {
 }
 
 .video-collection-cinema {
-    padding-bottom: 2vh;
-}
-
-.video-collection-cinema-wrapper {
-    padding-left: 1vw;
+    padding-left: 1.5vw;
     padding-right: 1vw;
     flex-wrap: wrap;
-    width: 17.5vw;
-    height: 43vw;
-    background-color: #000000;
-    align-self: flex-start;
+    width: 17vw;
+    background-color: (50, 0, 0, 0.5); /* Set the initial background color to black */
+    animation: fade-background-dim 3s infinite alternate;
+    border-radius: calc(0.5vw + 0.5vh);
+    align-self: center;
     display: flex;
-    overflow-x: auto; /* Enable horizontal scrolling */
+    overflow-y: auto; /* Enable horizontal scrolling */
     white-space: nowrap; /* Prevent videos from wrapping to new lines */
     scroll-behavior: smooth;
+    max-height: 38vw;
 }
+
 
 .video-collection-cinema-item {
     flex: 0 0 calc(15%);
@@ -287,6 +285,15 @@ nav a:hover {
     }
     to {
         background-color: rgb(50, 0, 0);
+    }
+}
+/* Animation */
+@keyframes fade-background-dim {
+    from {
+        background-color: rgb(50, 0, 0, 0.5);
+    }
+    to {
+        background-color: rgb(0, 0, 0, 0.5);
     }
 }
 @keyframes fade-in-opacity {
