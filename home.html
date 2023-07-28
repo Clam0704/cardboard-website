@@ -35,14 +35,16 @@
 
     <div style="display: flex; padding-top: 4vw;">
         <div style="display: table-cell; flex: 1;">
-            <video style="padding: 1vw; padding-top: 1vw; border-radius: calc(1vh + 1vw);" autoplay loop muted width="98%">
+            <video style="padding: 1vw; padding-top: 1vw; border-radius: calc(1vh + 1vw); grid-area: 1 / 1;" autoplay loop muted width="98%">
                 <!-- Include the video files in different formats -->
                 <source src="/assets/Video_1.MOV" type="video/mp4">
                 <!-- Add more source elements for other formats if needed -->
                 Your browser does not support the video tag.
-            </video>
+            </video> 
+            <div id="displayVideo1" class="overlaySub" style="position: absolute; top: 80vw; left: 2vw; width: 40vw">sdetryrhgfdewesdfergth  kyulkjhgfdsrd thyklk;olikyujt ytrertuyiulo  ;lukytryterwer wetrytuyklu i;loikyujthr </div>
 
-            <img src="/assets/image0.jpeg" type="image/jpeg" style="padding: 1vw; border-radius: calc(1vh + 1vw);" width="39.5%"> </img>
+            <img src="/assets/image0.jpeg" type="image/jpeg" style="padding: 1vw; border-radius: calc(1vh + 1vw); grid-area: 1 / 1;" width="39.5%"> </img>
+            <div id="displayImage1" class="overlaySub" style="position: absolute; top: 110vw; left: 2vw; width: 20vw">sdetryrhgfdewesdfergth  kyulkjhgfdsrd thyklk;olikyujt ytrertuyiulo  ;lukytryterwer wetrytuyklu i;loikyujthr </div>
 
             <video style="padding: 0.5vw; border-radius: calc(1vh + 1vw)" autoplay loop muted width="54%">
             <!-- Include the video files in different formats -->
@@ -50,6 +52,8 @@
             <!-- Add more source elements for other formats if needed -->
             Your browser doeshnot support the video tag.
             </video>
+            <div id="displayVideo2" class="overlaySub" style="position: absolute; top: 110vw; left: 30vw; width: 30vw">sdetryrhgfdewesdfergth  kyulkjhgfdsrd thyklk;olikyujt ytrertuyiulo  ;lukytryterwer wetrytuyklu i;loikyujthr </div>
+
         </div>
         <video style="padding: 1vw; border-radius: calc(2vh + 2vw)" autoplay loop muted width="32.5%" >
         <!-- Include the video files in different formats -->
@@ -57,6 +61,8 @@
         <!-- Add more source elements for other formats if needed -->
         Your browser does not support the video tag.
         </video>
+        <div id="displayVideo3" class="overlaySub" style="position: absolute; top: 80vw; left: 70vw; width: 5vw">sdetryrhgfdewesdfergth  kyulkjhgfdsrd thyklk;olikyujt ytrertuyiulo  ;lukytryterwer wetrytuyklu i;loikyujthr </div>
+
     </div>
 
     <h1>Top videos</h1>
@@ -107,6 +113,7 @@
     <script src="scripts/animateOverlayMain.js"></script>
     <script src="scripts/animateTitle.js"></script>
     <script src="scripts/animateBackground.js"></script>
+    <script src="scripts/animateDisplayVideoText.js"></script>
 
 </body>
 </html>
