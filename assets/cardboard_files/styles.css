@@ -165,13 +165,14 @@ nav a:hover {
 
 .overlaySub {
     display: flex;
+    font-size: calc(1.25vw + 0.25vh);
     font-family: Verdana;
     font-weight: bold;
     padding-left: 1vw;
     text-shadow: 0 0 2vw #000000;
     opacity: 0;
     grid-area: 1 / 1;
-    justify-content: center; /* Vertically center the text */
+    justify-content: start; /* Vertically center the text */
     align-items: center; 
     overflow-wrap: break-word; 
     word-wrap: break-word;
