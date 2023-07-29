@@ -22,9 +22,12 @@ function toggleFullscreen() {
 }
 
 function changeMainVideo(videoId) {
-    currentVideoIndex = videoId;
-    videoPlayer.src = "".concat('/assets/', videoSources[currentVideoIndex]);
-    videoPlayer.play();
+    if(currentVideoIndex !== videoId) {
+      currentVideoIndex = videoId;
+      videoPlayer.src = "".concat('/assets/', videoSources[currentVideoIndex]);
+      videoPlayer.play();
+    }
+    
 }
 
 videoPlayer.addEventListener('ended', () => {

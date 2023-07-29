@@ -20,7 +20,7 @@
     </div>
     <div>
         <div style="display: flex; height: 45vw;">
-            <div style="display: grid;">
+            <div style="display: grid; padding-left: calc(0.5vw + 0.5vh);">
                 <div style="border-radius: calc(1vw + 1vh); box-sizing: border-box; border: 0.5vw solid gray; z-index: 11; grid-area: 1 / 1; height: 44vw;"></div>
                 <video class="cinemaVideo" id="videoPlayer" style="grid-area: 1 / 1;" autoplay muted>
                     <!-- Include the video files in different formats -->
@@ -37,15 +37,15 @@
                       
                         <div class="curtain__panel curtain__panel--left"></div> <!-- curtain__panel -->
                       
-                        <div class="curtain__content">
+                        <!-- <div class="curtain__content">
                             &nbsp;▶
-                        </div>
+                        </div> -->
 
-                      <div class="curtain__panel curtain__panel--right"></div> <!-- curtain__panel -->
+                        <div class="curtain__panel curtain__panel--right"></div> <!-- curtain__panel -->
                     </div> <!-- curtain__wrapper -->
-                  </div> <!-- curtain -->
+                </div> <!-- curtain -->
             </div>
-            <div class="video-collection-cinema">
+            <div class="video-collection-cinema" style="padding-left: calc(0.5vw + 0.5vh);">
                 <div class="thumbnail" onclick="changeMainVideo(0)">
                     <img src="assets/MID OCEAN.jpg" alt="Video 1">
                 </div>
@@ -67,6 +67,6 @@
     
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="scripts/animateTitle.js"></script>
-    <script src="scripts/fullscreenButtonController.js"></script>
+    <script src="scripts/cinemaController.js"></script>
 </body>
 </html>
