@@ -5,7 +5,7 @@ const displayVideo2 = document.getElementById('displayVideo2');
 const displayVideo3 = document.getElementById('displayVideo3');
 const displayImage1 = document.getElementById('displayImage1');
 
-const waitFor = 1000;
+const waitFor = 10000;
 
 function switchToVideo1() {
     displayVideo2.style.animation = 'fade-out-opacity-overlay-main 0.5s forwards';
