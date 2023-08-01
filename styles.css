@@ -109,13 +109,12 @@ nav a:hover {
     background-color: black; /* Set the initial background color to black */
     animation: fade-background 3s infinite alternate;
     color: #fff; /* Set the text color to white */
-    position: sticky;
     top: 0;
     /* Use flexbox to horizontally spread the navigation links */
     display: flex;
     justify-content: space-between;
     padding-right: 3vh;
-    height: sum(1vh+1vw);
+    height: calc(6vh+5vw);
     z-index: 2;
 }
 
@@ -142,13 +141,13 @@ nav a:hover {
     border: none;
     cursor: pointer;
     position:relative;
-    top: 38vw;
+    top: 38.5vw;
     left: 72vw;
     font-size: 3rem;
     height: calc(2.5vw + 2.5vh);
     width: calc(2.5vw + 2.5vh);
     grid-area: 1 / 1;
-    z-index: 1;
+    z-index: 15;
     border-radius: calc(0.5vw + 0.5vh);
 }
 
@@ -175,6 +174,14 @@ nav a:hover {
     align-items: center; 
     overflow-wrap: break-word; 
     word-wrap: break-word;
+}
+
+.overlaySub a {
+    text-decoration: none;
+    display: inline-flex;
+    color: white;
+
+    
 }
 
 .thumbnail {
@@ -244,8 +251,6 @@ nav a:hover {
     word-break: break-word;
     align-items: flex-start;
 }
-
-
 
 #profile_pic {
     width: 300px; /* Adjust the width and height as needed */
@@ -360,15 +365,15 @@ nav a:hover {
     
   }
   
-  input[type=checkbox] {
-    position: absolute;
+  #curtain-checkbox {
+    position: relative;
     cursor: pointer;
-    width: 100%;
-    height: 100%;
     z-index: 100;
     opacity: 0;
-    top: 0;
-    left: 0;
+    top: 1vw;
+    left: 1vw;
+    height: calc(2.5vw + 2.5vh);
+    width: calc(2.5vw + 2.5vh);
   }
   
   input[type=checkbox]:checked ~ .curtain__panel--left {

@@ -1,5 +1,7 @@
 const videoPlayer = document.getElementById('videoPlayer');
 const fullscreenButton = document.getElementById('fullscreenButton');
+const curtainButton = document.getElementById('curtain-checkbox');
+const curtainButtonIcon = document.getElementById('curtain-checkbox-icon');
 
 fullscreenButton.addEventListener('click', toggleFullscreen);
 
@@ -34,3 +36,21 @@ videoPlayer.addEventListener('ended', () => {
     currentVideoIndex = (currentVideoIndex + 1) % videoSources.length;
     changeMainVideo(currentVideoIndex);
 });
+
+curtainButton.addEventListener('change', function() {
+  if (this.checked) {
+    curtainButtonIcon.src = "/assets/eyeClosed.png";
+    setTimeout(pauseVideo, 600);
+  } else {
+    curtainButtonIcon.src = "/assets/eyeOpen.png";
+    setTimeout(playVideo, 200);
+  }
+});
+
+function playVideo() {
+  videoPlayer.play()
+}
+
+function pauseVideo() {
+  videoPlayer.pause()
+}
