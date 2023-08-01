@@ -110,6 +110,7 @@ nav a:hover {
     animation: fade-background 3s infinite alternate;
     color: #fff; /* Set the text color to white */
     top: 0;
+    position: sticky;
     /* Use flexbox to horizontally spread the navigation links */
     display: flex;
     justify-content: space-between;
@@ -152,7 +153,6 @@ nav a:hover {
 }
 
 .overlayMain {
-    padding-top: 2.5vw;
     font-size: 7vw;
     font-family: Verdana;
     font-weight: bold;
@@ -272,7 +272,11 @@ nav a:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    max-width: 100%;
+    max-height: 100%;
+    min-width: 100%;
+    min-height: 100%;
+
     z-index: -1; /* Place the video below other elements */
     opacity: 1;
 }
