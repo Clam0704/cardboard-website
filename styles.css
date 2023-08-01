@@ -288,7 +288,7 @@ nav a:hover {
     scroll-behavior:smooth;
     scrollbar-color: rgb(38, 0, 255);
     scrollbar-width: 5vw;
-    height: 60vw;
+    height: 45vw;
     width: 100vw;
     z-index: 100;
 }
