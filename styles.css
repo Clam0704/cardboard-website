@@ -177,7 +177,7 @@ nav a:hover {
 }
 
 .overlaySub a {
-    text-decoration: none;
+    text-decoration: underline;
     display: inline-flex;
     color: white;
 
