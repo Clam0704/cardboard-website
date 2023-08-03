@@ -116,7 +116,7 @@ nav a:hover {
     justify-content: space-between;
     padding-right: 3vh;
     height: calc(6vh+5vw);
-    z-index: 2;
+    z-index: 20;
 }
 
 .embedDesc {
@@ -291,6 +291,7 @@ nav a:hover {
     height: 45vw;
     width: 100vw;
     z-index: 100;
+    padding-left: 1vw
 }
 
 /* Animation */
