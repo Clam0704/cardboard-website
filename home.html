@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=yes">
     <title>cardboard</title>
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/cardboard_fav.png">
     <link rel="stylesheet" href="styles.css">
@@ -19,78 +19,82 @@
         </nav>
     </div>
 
-    <div style="display: grid; width: 100%; height: 100%; max-width: 100%; max-height: 100%;">
-        <div style="grid-area: 1 / 1; position: absolute; padding-left: 2vw; padding-top: 1vw; font-size: 2vw; text-shadow: 0 0 2vw #000000; opacity: 0.7; text-decoration: none; display: inline-flex; color: white; z-index: 15;">
-            <p style="color: white;">
-                <a style = "color: white;" href="https://www.instagram.com/_cardboard._/" target="_blank">
-                    @_cardboard._
-                </a>
-            </p>
-        </div>  
-        <div id="overlayMain" class="overlayMain" style="grid-area: 1 / 1; width: 100%; height: 100%; position: absolute;">
-            <p>EDITOR</p>
-            <p>VISION MIXER</p>
-            <p>DIRECTOR</p>
-        </div>
-        <video id="background-video" autoplay loop muted style="grid-area: 1 / 1;">
-            <!-- Include the video files in different formats -->
-            <source src="/assets/home page.mp4" type="video/mp4">
-            <!-- Add more source elements for other formats if needed -->
-            Your browser does not support the video tag.
-        </video>
-    </div>
-
-    <div style="display: flex; padding-top: 4vw; padding-bottom: 2vw;">
-        <div style="display: table-cell; flex: 1;">
-            <video id="displayVideo1" style="padding: 1vw; padding-top: 1vw; border-radius: calc(1vh + 1vw); grid-area: 1 / 1;" autoplay loop muted width="98%">
+    <div class="slider">
+        <div class="slider__wrapper">
+            <input type="checkbox" id="slider-checkbox" style="grid-area: 1 / 1; z-index: 18;" checked> 
+            <img id="slider-checkbox-icon" src="/assets/right-arrow.png" type="image/jpg"></imgsrc>
+            <div class="slider__panel slider__panel--left" style="height: 92.5%;">
+                <!-- <div style="grid-area: 1 / 1; position: absolute; padding-left: calc(2.5vw + 1vh); padding-top: calc(0.25vw + 0.25vh); font-size: 2vw; text-shadow: 0 0 2vw #000000; opacity: 0.7; text-decoration: none; display: inline-flex; color: white; z-index: 15;">
+                    <p style="color: white;">
+                        <a style = "color: white;" href="https://www.instagram.com/_cardboard._/" target="_blank">
+                            @_cardboard._
+                        </a>
+                    </p>
+                </div>   -->
+                <div id="overlayMain" class="overlayMain" style="grid-area: 1 / 1; width: 100%; height: 100%; position: absolute;">
+                    <p>EDITOR</p>
+                    <p>VISION MIXER</p>
+                    <p>DIRECTOR</p>
+                </div>
+                <video id="background-video" autoplay loop muted style="grid-area: 1 / 1;">
+                    <!-- Include the video files in different formats -->
+                    <source src="/assets/home page.mp4" type="video/mp4">
+                    <!-- Add more source elements for other formats if needed -->
+                    Your browser does not support the video tag.
+                </video>
+            </div> <!-- slider__panel -->
+            <div class="slider__panel slider__panel--right" style="height: 95%;">
+                <div style="display: table-cell; flex: 1;">
+                    <video id="displayVideo1" style="padding: 1vw; padding-top: 1vw; border-radius: calc(1vh + 1vw); grid-area: 1 / 1;" autoplay loop muted width="98%">
+                        <!-- Include the video files in different formats -->
+                        <source src="/assets/Video_1.MOV" type="video/mp4">
+                        <!-- Add more source elements for other formats if needed -->
+                        Your browser does not support the video tag.
+                    </video>
+                    
+                    <div id="displayVideo1Text" class="overlaySub" style="position: absolute; top: 10vw; left: 8vw; width: 50vw;  font-size: calc(2vw + 0.5vh);">
+                        <p>
+                            VISUALS<br>
+                            As well as <a href="/films.html" >short films</a>, I make <a href="/visuals.html">abstract video art collages</a>.<br>
+                            These are visual only, and are meant to be played while listening to music.
+                        </p>
+                    </div>
+    
+                    <img id="displayImage1" src="/assets/image0.jpeg" type="image/jpeg" style="padding: 1vw; border-radius: calc(1vh + 1vw); grid-area: 1 / 1;" width="39.5%"> </img>
+                    <div id="displayImage1Text" class="overlaySub" style="position: absolute; top: 39vw; left: 6vw; width: 20vw; font-size: calc(1.2vw + 0.3vh);">
+                        <p>
+                            Some visuals are commissioned for events, or by artists. <br>
+                            Pictured are <a href="https://www.instagram.com/stories/highlights/18225777319197901/" target="_blank">7-hour visuals</a> I made for <a href="https://www.instagram.com/lockedin_mcr/" target="_blank">Locked In</a> at <a href="https://www.instagram.com/thisisgorilla/">Gorilla</a>, Manchester (April 8th, 2023). 
+                        </p>
+                    </div>
+    
+                    <video id="displayVideo2" style="padding: 0.5vw; border-radius: calc(1vh + 1vw)" autoplay loop muted width="54%">
+                    <!-- Include the video files in different formats -->
+                        <source src="/assets/Video.MOV" type="video/mp4">
+                    <!-- Add more source elements for other formats if needed -->
+                    Your browser does not support the video tag.
+                    </video>
+                    <div id="displayVideo2Text" class="overlaySub" style="position: absolute; top: 39vw; left: 35vw; width: 30vw; font-size: calc(1.5vw + 0.3vh);">
+                        <p>
+                            Now taking commissions for music videos, lyric videos, video art. <br>
+                            Visit <a href="/about.html">ABOUT</a> page for my email, to discuss terms and fees.
+                        </p>
+                    </div>
+    
+                </div>
+                <video id="displayVideo3" style="padding: 1vw; border-radius: calc(2vh + 2vw)" autoplay loop muted width="32.5%" >
                 <!-- Include the video files in different formats -->
-                <source src="/assets/Video_1.MOV" type="video/mp4">
+                    <source src="/assets/Video_2.MOV" type="video/mp4">
                 <!-- Add more source elements for other formats if needed -->
                 Your browser does not support the video tag.
-            </video>
-            
-            <div id="displayVideo1Text" class="overlaySub" style="position: absolute; top: 77.5vw; left: 4vw; width: 50vw;  font-size: calc(2vw + 0.5vh);">
-                <p>
-                    VISUALS<br>
-                    As well as <a href="/films.html" >short films</a>, I make <a href="/visuals.html">abstract video art collages</a>.<br>
-                    These are visual only, and are meant to be played while listening to music.
-                </p>
-            </div>
-
-            <img id="displayImage1" src="/assets/image0.jpeg" type="image/jpeg" style="padding: 1vw; border-radius: calc(1vh + 1vw); grid-area: 1 / 1;" width="39.5%"> </img>
-            <div id="displayImage1Text" class="overlaySub" style="position: absolute; top: 108vw; left: 2vw; width: 20vw; font-size: calc(1.2vw + 0.3vh);">
-                <p>
-                    Some visuals are commissioned for events, or by artists. <br>
-                    Pictured are <a href="https://www.instagram.com/stories/highlights/18225777319197901/" target="_blank">7-hour visuals</a> I made for <a href="https://www.instagram.com/lockedin_mcr/" target="_blank">Locked In</a> at <a href="https://www.instagram.com/thisisgorilla/">Gorilla</a>, Manchester (April 8th, 2023). 
-                </p>
-            </div>
-
-            <video id="displayVideo2" style="padding: 0.5vw; border-radius: calc(1vh + 1vw)" autoplay loop muted width="54%">
-            <!-- Include the video files in different formats -->
-                <source src="/assets/Video.MOV" type="video/mp4">
-            <!-- Add more source elements for other formats if needed -->
-            Your browser does not support the video tag.
-            </video>
-            <div id="displayVideo2Text" class="overlaySub" style="position: absolute; top: 110vw; left: 30vw; width: 30vw; font-size: calc(1.5vw + 0.3vh);">
-                <p>
-                    Now taking commissions for music videos, lyric videos, video art. <br>
-                    Visit <a href="/about.html">ABOUT</a> page for my email, to discuss terms and fees.
-                </p>
-            </div>
-
-        </div>
-        <video id="displayVideo3" style="padding: 1vw; border-radius: calc(2vh + 2vw)" autoplay loop muted width="32.5%" >
-        <!-- Include the video files in different formats -->
-            <source src="/assets/Video_2.MOV" type="video/mp4">
-        <!-- Add more source elements for other formats if needed -->
-        Your browser does not support the video tag.
-        </video>
-        <div id="displayVideo3Text" class="overlaySub" style="position: absolute; top: 75vw; left: 70vw; width: 25vw; font-size: calc(2vw + 0.5vh);">
-            Movement is random and the compositions are unstable, <br>
-            Making the visuals appear to synchronise with virtually any track. 
-        </div>
-
-    </div>
+                </video>
+                <div id="displayVideo3Text" class="overlaySub" style="position: absolute; top: 5vw; left: 72vw; width: 20vw; font-size: calc(2vw + 0.5vh);">
+                    Movement is random and the compositions are unstable, <br>
+                    Making the visuals appear to synchronise with virtually any track. 
+                </div>
+            </div> <!-- slider__panel -->
+        </div> <!-- slider__wrapper -->
+    </div> <!-- slider -->
 
     <h1>Top videos</h1>
     <div id="gallery">

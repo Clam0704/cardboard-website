@@ -1,6 +1,4 @@
 
-// Set the interval to change font every 2 seconds (adjust as needed)
-
 const changingText2 = document.getElementById('overlayMain');
 
 let currentFont2 = 1;

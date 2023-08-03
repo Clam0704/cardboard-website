@@ -8,6 +8,8 @@ body, ul {
 
 body {
     font-family: Verdana;
+    overflow-x: hidden;
+    max-width: 100%;
 }
 
 figure {
@@ -252,20 +254,6 @@ nav a:hover {
     align-items: flex-start;
 }
 
-#profile_pic {
-    width: 300px; /* Adjust the width and height as needed */
-    height: 300px;
-    border-radius: 50%; /* Crop the image into a circle */
-}
-
-#profile {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    vertical-align: top;
-    display: inline-block;
-    width: 120px;
-}
 
 #background-video {
     top: 0;
@@ -276,7 +264,7 @@ nav a:hover {
     max-height: 100%;
     min-width: 100%;
     min-height: 100%;
-
+    align-items:start;
     z-index: -1; /* Place the video below other elements */
     opacity: 1;
 }
@@ -293,6 +281,22 @@ nav a:hover {
     z-index: 100;
     padding-left: 1vw
 }
+
+#profile_pic {
+    width: 300px; /* Adjust the width and height as needed */
+    height: 300px;
+    border-radius: 50%; /* Crop the image into a circle */
+}
+
+#profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    vertical-align: top;
+    display: inline-block;
+    width: 120px;
+}
+
 
 /* Animation */
 @keyframes fade-background {
@@ -350,7 +354,105 @@ nav a:hover {
 }
 
 
-.curtain {
+.slider {
+    width: 200%;
+    height: 65vw;
+    align-items: center;
+    justify-content: start;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .slider__wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    
+  }
+  
+  #slider-checkbox {
+    position: relative;
+    cursor: pointer;
+    z-index: 100;
+    opacity: 0;
+    height: 40vw; 
+    width: 6vw;
+    top: 10vw; 
+    left: 93vw;
+  }
+  
+  input[type=checkbox]:checked ~ .slider__panel--left {
+    transform: translateX(0);
+  }
+  
+  input[type=checkbox]:checked ~ .slider__panel--right {
+    transform: translateX(0);
+  }
+  
+  input[type=checkbox]:not(:checked) ~ .slider__content {
+    z-index: -10;
+  }
+
+  input[type=checkbox]:checked ~ .slider__content {
+    z-index: 14;
+  }
+
+  .slider__panel {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    position: absolute;
+    width: 50%;
+    top: 0;
+    transition: transform 0.5s ease-out;
+    z-index: 2;
+  }
+  
+  .slider__panel--left {
+    transform: translateX(-100%);
+    overflow: hidden; /* Hide horizontal overflow */
+  }
+  
+  .slider__panel--right {
+    left: 50%;
+    padding-left: 5vw;
+    transform: translateX(-100%);
+    overflow: hidden; /* Hide horizontal overflow */
+  }
+  
+  .slider__content {
+    align-items: center;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    position: absolute;
+    text-align: center;
+    z-index: 1;
+    width: 100%;
+    font-size: 5vw;
+    transition: transform 0.5s ease-out;
+  
+    img {
+      width: 20%;
+    }
+  }
+
+  #slider-checkbox-icon {
+    height: 40vw; 
+    width: 6vw;
+    top: 10vw; 
+    left: 93vw; 
+    background-color: rgba(147, 147, 147, 0.5); 
+    border-radius: calc(0.5vw + 0.5vh); 
+    box-shadow: 0 0 0.5vw #000000; 
+    grid-area: 1 / 1; 
+    position: absolute;
+    z-index: 17;
+  }
+
+  .curtain {
     display: flex;
     padding-top: 0.5vw;
     padding-left: 0.5vw;
@@ -439,3 +541,4 @@ nav a:hover {
       width: 20%;
     }
   }
+
