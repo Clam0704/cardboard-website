@@ -21,8 +21,8 @@
     <div>
         <div style="display: flex; height: 45vw;">
             <div style="display: grid; padding-left: calc(0.5vw + 0.5vh);">
-                <div style="border-radius: calc(1vw + 1vh); box-sizing: border-box; border: 0.5vw solid gray; z-index: 11; grid-area: 1 / 1; height: 44vw;"></div>
-                <video class="cinemaVideo" id="videoPlayer" style="grid-area: 1 / 1;"  autoplay muted paused autobuffer>
+                <div style="border-radius: calc(1vw + 1vh); box-sizing: border-box; border: 0.5vw solid gray; z-index: 0; grid-area: 1 / 1; height: 44vw;"></div>
+                <video class="cinemaVideo" id="videoPlayer" style="grid-area: 1 / 1;" muted paused autobuffer>
                     <!-- Include the video files in different formats -->
                     <source src="/assets/MID OCEAN .mp4" type="video/mp4">
                     <!-- Add more source elements for other formats if needed -->
@@ -33,7 +33,7 @@
                 </button>
                 <div class="curtain" style="grid-area: 1 / 1;">
                     <div class="curtain__wrapper" style="grid-area: 1 / 1; display: grid;">
-                        <input type="checkbox" id="curtain-checkbox" style="grid-area: 1 / 1; z-index: 18;"> 
+                        <input type="checkbox" id="curtain-checkbox" style="grid-area: 1 / 1; z-index: 18;" checked="true"> 
                         <img id="curtain-checkbox-icon" src="/assets/eyeOpen.png" type="image/jpg" style="height: calc(2.5vw + 2.5vh); width: calc(2.5vw + 2.5vh); background-color: rgba(147, 147, 147, 0.4); border-radius: calc(0.5vw + 0.5vh); box-shadow: 0 0 0.5vw #000000; grid-area: 1 / 1; top: 1.2vw; left: 1.2vw; position: absolute; z-index: 17;"></imgsrc>
                         <div class="curtain__panel curtain__panel--left"></div> <!-- curtain__panel -->
                       
@@ -46,23 +46,23 @@
                 </div> <!-- curtain -->
             </div>
             <div class="video-collection-cinema-wrapper">
-                <button class="cinemaChangeButton">Films</button>
-                <div class="video-collection-cinema">
-                    <div class="thumbnail" onclick="changeMainVideo(0)">
+                <button id="cinemaChangeButton" class="cinemaChangeButton">Films</button>
+                <div id="video-collection-cinema" class="video-collection-cinema">
+                    <!-- <div class="thumbnail" onclick="changeMainVideo(1, 0)">
                         <img src="assets/MID OCEAN.jpg" alt="Video 1">
                     </div>
-                    <div class="thumbnail" onclick="changeMainVideo(1)">
+                    <div class="thumbnail" onclick="changeMainVideo(1, 1)">
                         <img src="assets/Two Dangers THE WARNINGS.jpg" alt="Video 2">
                     </div>
-                    <div class="thumbnail" onclick="changeMainVideo(2)">
+                    <div class="thumbnail" onclick="changeMainVideo(1, 2)">
                         <img src="assets/Abstrkt Replace Mode.jpg" alt="Video 3">
                     </div>
-                    <div class="thumbnail" onclick="changeMainVideo(2)">
+                    <div class="thumbnail" onclick="changeMainVideo(1, 2)">
                         <img src="assets/Abstrkt Replace Mode.jpg" alt="Video 4">
                     </div>
-                    <div class="thumbnail" onclick="changeMainVideo(2)">
+                    <div class="thumbnail" onclick="changeMainVideo(1, 2)">
                         <img src="assets/Abstrkt Replace Mode.jpg" alt="Video 5">
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
