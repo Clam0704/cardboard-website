@@ -16,9 +16,11 @@ sliderButton.addEventListener('change', function() {
     if (this.checked) {
         sliderButtonIcon.src = "/assets/right-arrow.png";
         pauseSubVideos();
+        fadeOutAll();
     } else {
         sliderButtonIcon.src = "/assets/left-arrow.png";
         pauseHomeVideo();
+        switchToVideo1();
     }
 });
 

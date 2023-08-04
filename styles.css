@@ -68,6 +68,15 @@ nav a:hover {
     animation: fade-background 3s infinite alternate;
 }
 
+.cinemaChangeButton {
+    grid-area: 1 / 1;
+    width: 80%;
+    height: 80%;
+    justify-self: center;
+    font-size: 3vw;
+    font-weight: bold;
+}
+
 .cinemaVideo {
     width:78vw;
     z-index: -1; /* Place the video below other elements */
@@ -146,7 +155,6 @@ nav a:hover {
     position:relative;
     top: 38.5vw;
     left: 72vw;
-    font-size: 3rem;
     height: calc(2.5vw + 2.5vh);
     width: calc(2.5vw + 2.5vh);
     grid-area: 1 / 1;
@@ -223,6 +231,12 @@ nav a:hover {
     white-space: nowrap; /* Prevent videos from wrapping to new lines */
     scroll-behavior: smooth;
     max-height: 38vw;
+    grid-area: 2 / 1;
+}
+
+.video-collection-cinema-wrapper {
+    display: grid;
+    height: 46vw;
 }
 
 

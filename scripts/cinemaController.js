@@ -2,14 +2,19 @@ const videoPlayer = document.getElementById('videoPlayer');
 const fullscreenButton = document.getElementById('fullscreenButton');
 const curtainButton = document.getElementById('curtain-checkbox');
 const curtainButtonIcon = document.getElementById('curtain-checkbox-icon');
+const cinemaChangeButton = document.getElementById('cinemaChangeButton');
 
 fullscreenButton.addEventListener('click', toggleFullscreen);
 
-const videoSources = [
-    'MID OCEAN .mp4',
-    'Abstrkt Replace Mode.mp4',
-    'Two Dangers THE WARNINGS.mp4',
+const visualSources = [
+  'MID OCEAN .mp4',
+  'Abstrkt Replace Mode.mp4',
+  'Two Dangers THE WARNINGS.mp4',
 ];
+
+const filmSources = [
+  'home page.mp4'
+]
 
 let currentVideoIndex = 0;
 
@@ -26,14 +31,14 @@ function toggleFullscreen() {
 function changeMainVideo(videoId) {
     if(currentVideoIndex !== videoId) {
       currentVideoIndex = videoId;
-      videoPlayer.src = "".concat('/assets/', videoSources[currentVideoIndex]);
+      videoPlayer.src = "".concat('/assets/', visualSources[currentVideoIndex]);
       videoPlayer.play();
     }
     
 }
 
 videoPlayer.addEventListener('ended', () => {
-    currentVideoIndex = (currentVideoIndex + 1) % videoSources.length;
+    currentVideoIndex = (currentVideoIndex + 1) % visualSources.length;
     changeMainVideo(currentVideoIndex);
 });
 
