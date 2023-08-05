@@ -75,6 +75,7 @@ nav a:hover {
     font-size: 3vw;
     font-weight: bold;
     border-radius: 1vw;
+    font-family: 'Unica One', sans-serif;;
 }
 
 .cinemaVideo {
@@ -124,7 +125,8 @@ nav a:hover {
     justify-content: space-between;
     padding-right: 3vh;
     z-index: 3;
-    height: 7vw;
+    height: calc(6vh+5vw);
+    align-items: flex-end;
 }
 
 /* Style the navigation bar */
