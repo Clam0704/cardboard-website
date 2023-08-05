@@ -1,29 +1,102 @@
-
-const changingText2 = document.getElementById('overlayMain');
-
-let currentFont2 = 1;
-
-function fadeOutAndChangeFont2() {
-    changingText2.style.animation = 'fade-out-opacity-overlay-main 0.3s forwards';
-    setTimeout(changeFont2, 250); // Wait for the fade-out animation to complete before changing the font
+const resolver = {
+    resolve: function resolve(options, callback) {
+      // The string to resolve
+      const resolveString = options.resolveString || options.element.getAttribute('data-target-resolver');
+      const combinedOptions = Object.assign({}, options, {resolveString: resolveString});
+      
+      function getRandomInteger(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+      };
+      
+      function randomCharacter(characters) {
+        return characters[getRandomInteger(0, characters.length - 1)];
+      };
+      
+      function doRandomiserEffect(options, callback) {
+        const characters = options.characters;
+        const timeout = options.timeout;
+        const element = options.element;
+        const partialString = options.partialString;
+  
+        let iterations = options.iterations;
+  
+        setTimeout(() => {
+          if (iterations >= 0) {
+            const nextOptions = Object.assign({}, options, {iterations: iterations - 1});
+  
+            // Ensures partialString without the random character as the final state.
+            if (iterations === 0) {
+              element.textContent = partialString;
+            } else {
+              // Replaces the last character of partialString with a random character
+              element.textContent = partialString.substring(0, partialString.length - 1) + randomCharacter(characters);
+            }
+  
+            doRandomiserEffect(nextOptions, callback)
+          } else if (typeof callback === "function") {
+            callback(); 
+          }
+        }, options.timeout);
+      };
+      
+      function doResolverEffect(options, callback) {
+        const resolveString = options.resolveString;
+        const characters = options.characters;
+        const offset = options.offset;
+        const partialString = resolveString.substring(0, offset);
+        const combinedOptions = Object.assign({}, options, {partialString: partialString});
+  
+        doRandomiserEffect(combinedOptions, () => {
+          const nextOptions = Object.assign({}, options, {offset: offset + 1});
+  
+          if (offset <= resolveString.length) {
+            doResolverEffect(nextOptions, callback);
+          } else if (typeof callback === "function") {
+            callback();
+          }
+        });
+      };
+  
+      doResolverEffect(combinedOptions, callback);
+    } 
 }
 
-function changeFont2() {
+  const strings = [
+    'Editor',
+    'Vision Mixer',
+    'Director',
+  ];
+  
+  let counter = 0;
+  
+  const options = {
+    // Initial position
+    offset: 0,
+    // Timeout between each random character
+    timeout: 5,
+    // Number of random characters to show
+    iterations: 10,
+    // Random characters to pick from
+    characters: ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'x', 'y', 'x', '#', '%', '&', '-', '+', '_', '?', '/', '\\', '='],
+    // String to resolve
+    resolveString: strings[counter],
+    // The element
+    element: document.querySelector('[data-target-resolver]')
+  }
+  
+  // Callback function when resolve completes
+  function callback() {
+    setTimeout(() => {
+      counter ++;
+      
+      if (counter >= strings.length) {
+        counter = 0;
+      }
+      
+      let nextOptions = Object.assign({}, options, {resolveString: strings[counter]});
+      resolver.resolve(nextOptions, callback);
+    }, 1000);
+  }
+  
+  resolver.resolve(options, callback);
 
-    // const fonts2 = ['Arial', 'Times New Roman', 'Courier New', 
-    //                'Verdana', 'Tahoma', 'Trebuchet MS',
-    //                'Georgia', 'Garamond', 'Brush Script MT'];
-
-    // let randVal2 = Math.floor(Math.random() * fonts2.length)
-    // while (randVal2 == currentFont) {
-    //     randVal2 = Math.floor(Math.random() * fonts2.length)
-    // }
-    // currentFont2 = randVal2;
-    // changingText2.style.fontFamily = fonts2[randVal2];
-
-    changingText2.style.animation = 'fade-in-opacity-overlay-main 0.3s forwards';
-    setTimeout(fadeOutAndChangeFont2, 2000); // Repeat the process every 0.5 seconds (500 milliseconds)
-}
-
-// Call the fadeOutAndChangeFont function to start the process initially
-fadeOutAndChangeFont2();

@@ -7,7 +7,7 @@ body, ul {
 }
 
 body {
-    font-family: Verdana;
+    font-family: 'Unica One', sans-serif;
     overflow-x: hidden;
     max-width: 100%;
 }
@@ -19,9 +19,7 @@ figure {
 }
 
 h1 {
-    padding-left: 3vw;
-    font-size: 3vw;
-    font-family: Verdana;
+    padding-left: 2vw;
 }
 
 h2 {
@@ -52,7 +50,6 @@ nav a {
     color: #fff; /* Set the link text color to white */
     padding-left: 2vw;
     font-size: 2vw;
-    font-family: Verdana;
 }
 
 nav a:hover {
@@ -90,6 +87,18 @@ nav a:hover {
     box-sizing: border-box;
 }
 
+.cinemaVideo::after {
+    content: '';
+    position: absolute;
+    top: -4px; /* Adjust this value to control the border thickness */
+    left: -4px; /* Adjust this value to control the border thickness */
+    width: calc(100% + 8px); /* Adjust this value to control the border thickness */
+    height: calc(100% + 8px); /* Adjust this value to control the border thickness */
+    border: 60px solid red; /* Set the border properties here */
+    /* Set the z-index for the border */
+    z-index: 20;
+  }
+    
 /* Hide controls when in fullscreen mode */
 .cinemaVideo::-webkit-media-controls {
     display: none;
@@ -131,6 +140,7 @@ nav a:hover {
     padding-right: 3vh;
     height: calc(6vh+5vw);
     z-index: 20;
+    align-items: flex-end;
 }
 
 .embedDesc {
@@ -140,7 +150,6 @@ nav a:hover {
     overflow-wrap: break-word; 
     word-wrap: break-word;
     white-space: normal; 
-    font-family: Verdana;
 }
 
 .embedTitle {
@@ -148,7 +157,6 @@ nav a:hover {
     white-space: normal; 
     overflow-wrap: break-word; 
     word-wrap: break-word;
-    font-family: Verdana;
 }
 
 .fullscreen-button {
@@ -166,18 +174,18 @@ nav a:hover {
 }
 
 .overlayMain {
-    font-size: 7vw;
-    font-family: Verdana;
+    font-size: 8vw;
     font-weight: bold;
     text-shadow: 0 0 2vw #000000;
-    opacity: 0.7;
-    text-align: center;
+    opacity: 0.9;
     z-index: 1;
+    display: flex;
+    align-items: center; /* Vertical alignment */
+    justify-content: center; /* Horizontal alignment */
 }
 
 .overlaySub {
     display: flex;
-    font-family: Verdana;
     font-weight: bold;
     padding-left: 1vw;
     text-shadow: 0 0 2vw #000000;
@@ -376,7 +384,7 @@ nav a:hover {
 
 .slider {
     width: 200%;
-    height: 65vw;
+    height: 60vw;
     align-items: center;
     justify-content: start;
     position: relative;
@@ -526,7 +534,6 @@ nav a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #1c1c1c;
     color: #fff;
     position: absolute;
     width: 50.5%;
@@ -538,11 +545,15 @@ nav a:hover {
   .curtain__panel--left {
     left: 0;
     transform: translateX(-100%);
+    background-image: url("assets/curtain-left.png");
+    background-size: contain;
   }
   
   .curtain__panel--right {
     right: 0;
     transform: translateX(100%);
+    background-image: url("assets/curtain-left.png");
+    background-size: contain;
   }
   
   .curtain__content {
@@ -565,3 +576,471 @@ nav a:hover {
     }
   }
 
+  .heading {
+    color: #eee;
+    font-size: 5rem;
+    font-weight: 300;
+    text-transform: uppercase;
+  }
+  
+  
+  a {
+    color: #ccc;
+  }
+  
+  section {
+    padding: 2vw;
+  }
+  
+  .hero {
+    font-size: 3vw;
+    display: flex;
+    color: #fff;
+    z-index: 2;
+    justify-content: flex-end;
+    align-items: flex-end;
+    /* Bright things in dark environments usually cast that light, giving off a glow */
+    filter: drop-shadow(0 1px 3px);
+  }
+  
+  .single-path {
+    clip-path: polygon(
+      0% 12%,
+      53% 12%,
+      53% 26%,
+      25% 26%,
+      25% 86%,
+      31% 86%,
+      31% 0%,
+      53% 0%,
+      53% 84%,
+      92% 84%,
+      92% 82%,
+      70% 82%,
+      70% 29%,
+      78% 29%,
+      78% 65%,
+      69% 65%,
+      69% 66%,
+      77% 66%,
+      77% 45%,
+      85% 45%,
+      85% 26%,
+      97% 26%,
+      97% 28%,
+      84% 28%,
+      84% 34%,
+      54% 34%,
+      54% 89%,
+      30% 89%,
+      30% 58%,
+      83% 58%,
+      83% 5%,
+      68% 5%,
+      68% 36%,
+      62% 36%,
+      62% 1%,
+      12% 1%,
+      12% 34%,
+      60% 34%,
+      60% 57%,
+      98% 57%,
+      98% 83%,
+      1% 83%,
+      1% 53%,
+      91% 53%,
+      91% 84%,
+      8% 84%,
+      8% 83%,
+      4% 83%
+    );
+  }
+  
+  .paths {
+    animation: paths 5s step-end infinite;
+  }
+  
+  @keyframes paths {
+    0% {
+      clip-path: polygon(
+        0% 43%,
+        83% 43%,
+        83% 22%,
+        23% 22%,
+        23% 24%,
+        91% 24%,
+        91% 26%,
+        18% 26%,
+        18% 83%,
+        29% 83%,
+        29% 17%,
+        41% 17%,
+        41% 39%,
+        18% 39%,
+        18% 82%,
+        54% 82%,
+        54% 88%,
+        19% 88%,
+        19% 4%,
+        39% 4%,
+        39% 14%,
+        76% 14%,
+        76% 52%,
+        23% 52%,
+        23% 35%,
+        19% 35%,
+        19% 8%,
+        36% 8%,
+        36% 31%,
+        73% 31%,
+        73% 16%,
+        1% 16%,
+        1% 56%,
+        50% 56%,
+        50% 8%
+      );
+    }
+  
+    5% {
+      clip-path: polygon(
+        0% 29%,
+        44% 29%,
+        44% 83%,
+        94% 83%,
+        94% 56%,
+        11% 56%,
+        11% 64%,
+        94% 64%,
+        94% 70%,
+        88% 70%,
+        88% 32%,
+        18% 32%,
+        18% 96%,
+        10% 96%,
+        10% 62%,
+        9% 62%,
+        9% 84%,
+        68% 84%,
+        68% 50%,
+        52% 50%,
+        52% 55%,
+        35% 55%,
+        35% 87%,
+        25% 87%,
+        25% 39%,
+        15% 39%,
+        15% 88%,
+        52% 88%
+      );
+    }
+  
+    30% {
+      clip-path: polygon(
+        0% 53%,
+        93% 53%,
+        93% 62%,
+        68% 62%,
+        68% 37%,
+        97% 37%,
+        97% 89%,
+        13% 89%,
+        13% 45%,
+        51% 45%,
+        51% 88%,
+        17% 88%,
+        17% 54%,
+        81% 54%,
+        81% 75%,
+        79% 75%,
+        79% 76%,
+        38% 76%,
+        38% 28%,
+        61% 28%,
+        61% 12%,
+        55% 12%,
+        55% 62%,
+        68% 62%,
+        68% 51%,
+        0% 51%,
+        0% 92%,
+        63% 92%,
+        63% 4%,
+        65% 4%
+      );
+    }
+  
+    45% {
+      clip-path: polygon(
+        0% 33%,
+        2% 33%,
+        2% 69%,
+        58% 69%,
+        58% 94%,
+        55% 94%,
+        55% 25%,
+        33% 25%,
+        33% 85%,
+        16% 85%,
+        16% 19%,
+        5% 19%,
+        5% 20%,
+        79% 20%,
+        79% 96%,
+        93% 96%,
+        93% 50%,
+        5% 50%,
+        5% 74%,
+        55% 74%,
+        55% 57%,
+        96% 57%,
+        96% 59%,
+        87% 59%,
+        87% 65%,
+        82% 65%,
+        82% 39%,
+        63% 39%,
+        63% 92%,
+        4% 92%,
+        4% 36%,
+        24% 36%,
+        24% 70%,
+        1% 70%,
+        1% 43%,
+        15% 43%,
+        15% 28%,
+        23% 28%,
+        23% 71%,
+        90% 71%,
+        90% 86%,
+        97% 86%,
+        97% 1%,
+        60% 1%,
+        60% 67%,
+        71% 67%,
+        71% 91%,
+        17% 91%,
+        17% 14%,
+        39% 14%,
+        39% 30%,
+        58% 30%,
+        58% 11%,
+        52% 11%,
+        52% 83%,
+        68% 83%
+      );
+    }
+  
+    76% {
+      clip-path: polygon(
+        0% 26%,
+        15% 26%,
+        15% 73%,
+        72% 73%,
+        72% 70%,
+        77% 70%,
+        77% 75%,
+        8% 75%,
+        8% 42%,
+        4% 42%,
+        4% 61%,
+        17% 61%,
+        17% 12%,
+        26% 12%,
+        26% 63%,
+        73% 63%,
+        73% 43%,
+        90% 43%,
+        90% 67%,
+        50% 67%,
+        50% 41%,
+        42% 41%,
+        42% 46%,
+        50% 46%,
+        50% 84%,
+        96% 84%,
+        96% 78%,
+        49% 78%,
+        49% 25%,
+        63% 25%,
+        63% 14%
+      );
+    }
+  
+    90% {
+      clip-path: polygon(
+        0% 41%,
+        13% 41%,
+        13% 6%,
+        87% 6%,
+        87% 93%,
+        10% 93%,
+        10% 13%,
+        89% 13%,
+        89% 6%,
+        3% 6%,
+        3% 8%,
+        16% 8%,
+        16% 79%,
+        0% 79%,
+        0% 99%,
+        92% 99%,
+        92% 90%,
+        5% 90%,
+        5% 60%,
+        0% 60%,
+        0% 48%,
+        89% 48%,
+        89% 13%,
+        80% 13%,
+        80% 43%,
+        95% 43%,
+        95% 19%,
+        80% 19%,
+        80% 85%,
+        38% 85%,
+        38% 62%
+      );
+    }
+  
+    1%,
+    7%,
+    33%,
+    47%,
+    78%,
+    93% {
+      clip-path: none;
+    }
+  }
+  
+  .movement {
+    /* Normally this position would be absolute & on the layers, set to relative here so we can see it on the div */
+    position: relative;
+    animation: movement 8s step-end infinite;
+  }
+  
+  @keyframes movement {
+    0% {
+      top: 0px;
+      left: -2vw;
+    }
+  
+    15% {
+      top: 1vw;
+      left: 1vw;
+    }
+  
+    60% {
+      top: 0.5vw;
+      left: -1vw;
+    }
+  
+    75% {
+      top: -0.5vw;
+      left: 2vw;
+    }
+  
+    100% {
+      top: 1vw;
+      left: 0.5vw;
+    }
+  }
+  
+  .opacity {
+    animation: opacity 5s step-end infinite;
+  }
+  
+  @keyframes opacity {
+    0% {
+      opacity: 0.1;
+    }
+  
+    5% {
+      opacity: 0.7;
+    }
+  
+    30% {
+      opacity: 0.4;
+    }
+  
+    45% {
+      opacity: 0.6;
+    }
+  
+    76% {
+      opacity: 0.4;
+    }
+  
+    90% {
+      opacity: 0.8;
+    }
+  
+    1%,
+    7%,
+    33%,
+    47%,
+    78%,
+    93% {
+      opacity: 0;
+    }
+  }
+  
+  .font {
+    animation: font 7s step-end infinite;
+  }
+  
+  @keyframes font {
+    0% {
+      font-weight: 50;
+      color: #e0287d;
+      filter: blur(0.25vw);
+    }
+  
+    20% {
+      font-weight: 250;
+      color: #fff;
+      filter: blur(0);
+    }
+  
+    50% {
+      font-weight: 150;
+      color: #1bc7fb;
+      filter: blur(0.2vw);
+    }
+  
+    60% {
+      font-weight: 350;
+      color: #fff;
+      filter: blur(0);
+    }
+  
+    90% {
+      font-weight: 250;
+      color: #e0287d;
+      filter: blur(0.5vw);
+    }
+  }
+  
+  .glitch span {
+    animation: paths 5s step-end infinite;
+  }
+  
+  .glitch::before {
+    animation: paths 5s step-end infinite, opacity 5s step-end infinite,
+      font 8s step-end infinite, movement 10s step-end infinite;
+  }
+  
+  .glitch::after {
+    animation: paths 5s step-end infinite, opacity 5s step-end infinite,
+      font 7s step-end infinite, movement 8s step-end infinite;
+  }
+  
+  .hero-container {
+    position: relative;
+    text-align: center;
+  }
+
+  .hero-container h1 {
+    padding-left: 1vw;
+    margin: 0;
+  }
+  

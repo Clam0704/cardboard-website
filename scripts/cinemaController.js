@@ -111,8 +111,6 @@ function createThumbnails() {
       thumbnail.appendChild(img);
     }
     videoPlayer.muted = false;
-    videoPlayer.controls = true;
-    fullscreenButton.style.zIndex = -5;
   }
 }
 
