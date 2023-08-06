@@ -13,11 +13,11 @@
         <div class="hero-container">
             <div class="environment"></div>
             <h1 class="hero glitch layers" data-text="Bules Bockwell Bilms">
-                <span>Jules Stockwell Films</span>
+                <span><a href="home.html">Jules Stockwell Films</a></span>
             </h1>
         </div>
         <nav>
-            <a class="current" style="font-weight:bold;" href="/home.html">Home</a>
+            <a class="current" style="font-weight:bold; filter: drop-shadow(0 0 0.25vw); -webkit-filter: drop-shadow(0 0 0.25vw);" href="/index.html">Home</a>
             <a href="/films.html">Films</a>
             <a href="/visuals.html">Visuals</a>
             <a href="/cinema.html">Cinema</a>
@@ -100,7 +100,12 @@
         </div> <!-- slider__wrapper -->
     </div> <!-- slider -->
 
-    <h1>Top videos</h1>
+    <div style="display: flex;">
+        <h1 style="padding-right: 2vw;">Top videos</h1>
+        <button id="scrollLeftBtn">&lt;</button>
+        <button id="scrollRightBtn">&gt;</button>
+    </div>
+    
     <div id="gallery">
         <div class="video-component">
             <iframe src="https://www.youtube.com/embed/PvRBP0zNASs?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen="true" loading="lazy" ></iframe>
@@ -142,8 +147,6 @@
             </div>
         </div>
     </div>
-    <button id="scrollLeftBtn">&lt;</button>
-    <button id="scrollRightBtn">&gt;</button>
     
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="scripts/animateOverlayMain.js"></script>

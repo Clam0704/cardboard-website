@@ -67,6 +67,10 @@ const resolver = {
     'Director',
   ];
   
+  const strings2 = [
+    'hello'
+  ]
+  
   let counter = 0;
   
   const options = {
@@ -84,6 +88,22 @@ const resolver = {
     element: document.querySelector('[data-target-resolver]')
   }
   
+  const options2 = {
+    // Initial position
+    offset: 0,
+    // Timeout between each random character
+    timeout: 5,
+    // Number of random characters to show
+    iterations: 10,
+    // Random characters to pick from
+    characters: ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'x', 'y', 'x', '#', '%', '&', '-', '+', '_', '?', '/', '\\', '='],
+    // String to resolve
+    resolveString: strings[counter],
+    // The element
+    element: document.querySelector('[data-target-resolver]')
+  }
+
+
   // Callback function when resolve completes
   function callback() {
     setTimeout(() => {
