@@ -179,7 +179,7 @@ nav a:hover {
     font-size: 8vw;
     font-weight: bold;
     text-shadow: 0 0 2vw #000000;
-    opacity: 0.9;
+    opacity: 0.7;
     z-index: 1;
     display: flex;
     align-items: center; /* Vertical alignment */
@@ -473,13 +473,13 @@ nav a:hover {
     height: 40vw; 
     width: 6vw;
     top: 10vw; 
-    left: 93vw; 
-    background-color: rgba(147, 147, 147, 0.5); 
-    border-radius: calc(0.5vw + 0.5vh); 
-    box-shadow: 0 0 0.5vw #000000; 
+    left: 93vw;  
     grid-area: 1 / 1; 
     position: absolute;
     z-index: 17;
+    -webkit-filter: drop-shadow(0 0 2vw #ffffff);
+    filter: drop-shadow(0 0 2vw #ffffff);
+    animation: blurAnimation 01s infinite alternate;
   }
 
   .curtain {
@@ -1051,4 +1051,15 @@ nav a:hover {
 
 #scrollRightBtn {
   right: 10px;
+}
+
+@keyframes blurAnimation {
+    0% {
+        -webkit-filter: drop-shadow(0 0 0.5vw #ffffff); /* Start with the initial drop shadow */
+        filter: drop-shadow(0 0 0.5vw #ffffff); /* Start with the initial drop shadow */
+    }
+    100% {
+        -webkit-filter: drop-shadow(0 0 1.5vw #ffffff); /* Gradually increase the blur radius */
+        filter: drop-shadow(0 0 1vw #ffffff); /* End with the desired drop shadow */
+    }
 }
