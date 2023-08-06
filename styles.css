@@ -524,7 +524,7 @@ nav a:hover {
 
   input[type=checkbox]:not(:checked) ~ .curtain__content {
     z-index: -10;
-    transform: translateX(-100%);
+    transform: translateX(-101%);
   }
 
   input[type=checkbox]:checked ~ .curtain__content {
@@ -538,24 +538,23 @@ nav a:hover {
     justify-content: center;
     color: #fff;
     position: absolute;
-    width: 50.5%;
+    width: 50%;
     height: 100%;
     transition: transform 1s ease-out;
     z-index: -1;
+    background-image: url("assets/metal-door.jpg");
+    background-size: contain;
+    filter: brightness(65%)
   }
   
   .curtain__panel--left {
     left: 0;
-    transform: translateX(-100%);
-    background-image: url("assets/curtain-left.png");
-    background-size: contain;
+    transform: translateX(-101%);
   }
   
   .curtain__panel--right {
     right: 0;
     transform: translateX(100%);
-    background-image: url("assets/curtain-left.png");
-    background-size: contain;
   }
   
   .curtain__content {
@@ -1046,3 +1045,10 @@ nav a:hover {
     margin: 0;
   }
   
+#scrollLeftBtn {
+    left: 10px;
+}
+
+#scrollRightBtn {
+  right: 10px;
+}

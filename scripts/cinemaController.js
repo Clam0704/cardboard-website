@@ -4,6 +4,8 @@ const curtainButton = document.getElementById('curtain-checkbox');
 const curtainButtonIcon = document.getElementById('curtain-checkbox-icon');
 const cinemaChangeButton = document.getElementById('cinemaChangeButton');
 const videoCollectionCinema = document.getElementById('video-collection-cinema');
+const leftCurtain = document.getElementById('leftCurtain');
+const rightCurtain = document.getElementById('rightCurtain');
 
 fullscreenButton.addEventListener('click', toggleFullscreen);
 
@@ -20,18 +22,19 @@ const visualSourcesThumbnails = [
 ];
 
 const filmSources = [
-  'home page.mp4'
+  'CREATIVITY.mp4',
+  'LIVING THE DREAM.mp4',
 ]
 
 const filmSourcesThumbnails = [
-  'Two Dangers THE WARNINGS.jpg',
-  'Abstrkt Replace Mode.jpg',
+  'CREATIVITY.png',
+  'LIVING THE DREAM.png',
 ]
 
 const visualId = 1;
 const filmId = 2;
 
-let currentVideoIndex = 0;
+let currentVideoIndex = -1;
 let currentTypeIndex = 1;
 
 function toggleFullscreen() {
@@ -114,10 +117,28 @@ function createThumbnails() {
   }
 }
 
+function swapCurtainImage() {
+  videoPlayer.src = ""
+  currentVideoIndex = -1;
+  if (currentTypeIndex == 1) {
+    leftCurtain.style.backgroundImage = `url("/assets/metal-door.jpg")`;
+    rightCurtain.style.backgroundImage = `url("/assets/metal-door.jpg")`;
+  } else {
+    leftCurtain.style.backgroundImage = `url("/assets/curtain-left.png")`;
+    rightCurtain.style.backgroundImage = `url("/assets/curtain-left.png")`;
+  }
+}
+
 // Button click event handler
 cinemaChangeButton.addEventListener('click', () => {
   currentTypeIndex = currentTypeIndex === 1 ? 2 : currentTypeIndex === 2 ? 1 : currentTypeIndex;
+  if (cinemaChangeButton.textContent == "Visuals") {
+    cinemaChangeButton.textContent = "Films";
+  } else {
+    cinemaChangeButton.textContent = "Visuals"
+  }
   curtainButton.checked = true;
+  swapCurtainImage();
   createThumbnails();
 });
 

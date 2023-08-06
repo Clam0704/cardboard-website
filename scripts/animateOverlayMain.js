@@ -100,3 +100,18 @@ const resolver = {
   
   resolver.resolve(options, callback);
 
+  const container = document.getElementById("gallery");
+
+  const scrollLeftBtn = document.getElementById('scrollLeftBtn');
+  const scrollRightBtn = document.getElementById('scrollRightBtn');
+  const vwValue = -46.5; // Change this value as needed
+  const scrollAmount = vwValue * (container.clientWidth / 100);
+
+  scrollLeftBtn.addEventListener('click', () => {
+    container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+  });
+  
+  // Scroll to the right
+  scrollRightBtn.addEventListener('click', () => {
+    container.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+  });
