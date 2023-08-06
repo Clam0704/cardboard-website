@@ -51,9 +51,9 @@ function changeMainVideo(typeID, videoId) {
   if((currentVideoIndex !== videoId) || (currentTypeIndex !== typeID)) {
     currentVideoIndex = videoId;
     if(currentTypeIndex == 1) {
-      videoPlayer.src = "".concat('/assets/', visualSources[currentVideoIndex]);
+      videoPlayer.src = "".concat('/assets/videos/cinema videos/', visualSources[currentVideoIndex]);
     } else {
-      videoPlayer.src = "".concat('/assets/', filmSources[currentVideoIndex]);
+      videoPlayer.src = "".concat('/assets/videos/cinema videos/', filmSources[currentVideoIndex]);
     }
     playVideo();
   } else if (curtainButton.checked == true) {
@@ -68,10 +68,10 @@ videoPlayer.addEventListener('ended', () => {
 
 curtainButton.addEventListener('change', function() {
   if (this.checked) {
-    curtainButtonIcon.src = "/assets/eyeClosed.png";
+    curtainButtonIcon.src = "/assets/images/icons/eyeClosed.png";
     setTimeout(pauseVideo, 600);
   } else {
-    curtainButtonIcon.src = "/assets/eyeOpen.png";
+    curtainButtonIcon.src = "/assets/images/icons/eyeOpen.png";
     setTimeout(playVideo, 200);
   }
 });
@@ -94,7 +94,7 @@ function createThumbnails() {
       let thumbnail = document.createElement('div');
       thumbnail.classList.add('thumbnail');
       let img = document.createElement('img');
-      img.src = "".concat('/assets/',visualSourcesThumbnails[i]);
+      img.src = "".concat('/assets/images/thumbnails/',visualSourcesThumbnails[i]);
       thumbnail.setAttribute('onclick', "".concat('changeMainVideo(', currentTypeIndex ,', ' , i, ')'))
       videoCollectionCinema.appendChild(thumbnail);
       thumbnail.appendChild(img);
@@ -108,7 +108,7 @@ function createThumbnails() {
       let thumbnail = document.createElement('div');
       thumbnail.classList.add('thumbnail');
       let img = document.createElement('img');
-      img.src = "".concat('/assets/',filmSourcesThumbnails[i]);
+      img.src = "".concat('/assets/images/thumbnails/',filmSourcesThumbnails[i]);
       thumbnail.setAttribute('onclick', "".concat('changeMainVideo(', currentTypeIndex ,', ' , i, ')'))
       videoCollectionCinema.appendChild(thumbnail);
       thumbnail.appendChild(img);
@@ -121,11 +121,11 @@ function swapCurtainImage() {
   videoPlayer.src = ""
   currentVideoIndex = -1;
   if (currentTypeIndex == 1) {
-    leftCurtain.style.backgroundImage = `url("/assets/metal-door.jpg")`;
-    rightCurtain.style.backgroundImage = `url("/assets/metal-door.jpg")`;
+    leftCurtain.style.backgroundImage = `url("/assets/images/other images/metal-door.jpg")`;
+    rightCurtain.style.backgroundImage = `url("/assets/images/other images/metal-door.jpg")`;
   } else {
-    leftCurtain.style.backgroundImage = `url("/assets/curtain-left.png")`;
-    rightCurtain.style.backgroundImage = `url("/assets/curtain-left.png")`;
+    leftCurtain.style.backgroundImage = `url("/assets/images/other images/curtain-left.png")`;
+    rightCurtain.style.backgroundImage = `url("/assets/images/other images/curtain-left.png")`;
   }
 }
 

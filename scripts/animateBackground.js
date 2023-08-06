@@ -14,11 +14,11 @@ sliderButton.addEventListener('change', function() {
     console.log("Event Listener triggered.");
     
     if (this.checked) {
-        sliderButtonIcon.src = "/assets/right-arrow.png";
+        sliderButtonIcon.src = "/assets/images/icons/right-arrow.png";
         pauseSubVideos();
         fadeOutAll();
     } else {
-        sliderButtonIcon.src = "/assets/left-arrow.png";
+        sliderButtonIcon.src = "/assets/images/icons/left-arrow.png";
         pauseHomeVideo();
         switchToVideo1();
     }

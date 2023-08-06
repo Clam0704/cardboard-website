@@ -542,7 +542,7 @@ nav a:hover {
     height: 100%;
     transition: transform 1s ease-out;
     z-index: -1;
-    background-image: url("assets/metal-door.jpg");
+    background-image: url("assets/images/other images/metal-door.jpg");
     background-size: contain;
     filter: brightness(65%)
   }
