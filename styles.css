@@ -179,7 +179,7 @@ nav a:hover {
     font-size: 8vw;
     font-weight: bold;
     text-shadow: 0 0 2vw #000000;
-    opacity: 0.7;
+    opacity: 0.8;
     z-index: 1;
     display: flex;
     align-items: center; /* Vertical alignment */
@@ -470,10 +470,10 @@ nav a:hover {
   }
 
   #slider-checkbox-icon {
-    height: 40vw; 
-    width: 6vw;
-    top: 10vw; 
-    left: 93vw;  
+    height: 36vw; 
+    width: 4.5vw;
+    top: 12vw; 
+    left: 94.5vw;  
     grid-area: 1 / 1; 
     position: absolute;
     z-index: 17;
