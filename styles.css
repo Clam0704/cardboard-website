@@ -97,18 +97,6 @@ nav a:hover {
     box-sizing: border-box;
 }
 
-.cinemaVideo::after {
-    content: '';
-    position: absolute;
-    top: -4px; /* Adjust this value to control the border thickness */
-    left: -4px; /* Adjust this value to control the border thickness */
-    width: calc(100% + 8px); /* Adjust this value to control the border thickness */
-    height: calc(100% + 8px); /* Adjust this value to control the border thickness */
-    border: 60px solid red; /* Set the border properties here */
-    /* Set the z-index for the border */
-    z-index: 20;
-  }
-    
 /* Hide controls when in fullscreen mode */
 .cinemaVideo::-webkit-media-controls {
     display: none;
