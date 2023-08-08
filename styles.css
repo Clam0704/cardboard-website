@@ -102,6 +102,7 @@ nav a:hover {
     justify-content: center; /* Horizontally center the video */
     border-radius: calc(1vw + 1vh); 
     box-sizing: border-box;
+    position: relative;
 }
 
 /* Hide controls when in fullscreen mode */
@@ -235,10 +236,10 @@ nav a:hover {
 }
 
 .video-collection-cinema {
-    padding-left: 1.5vw;
+    padding-left: 0.5vw;
     padding-right: 1vw;
     flex-wrap: wrap;
-    width: 17vw;
+    width: 16vw;
     background-color: (50, 0, 0); /* Set the initial background color to black */
     animation: fade-background-dim 3s infinite alternate;
     border-radius: calc(0.5vw + 0.5vh);
@@ -258,7 +259,7 @@ nav a:hover {
     display: grid;
     height: 44vw;
     align-items: end;
-    padding-left: 1.25vw;
+    padding-left: 2vw;
 }
 
 
