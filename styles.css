@@ -213,8 +213,28 @@ nav a:hover {
     text-decoration: underline;
     display: inline-flex;
     color: white;
+}
 
-    
+.social-buttons-container {
+  display: flex;
+  margin-top: 0.5vw;
+  margin-left: 0.5vw;
+  width: 17.5%;
+}
+
+.social-button {
+    margin-left: 0.35vw;
+    border-radius: 0.1em;
+    background: none;
+    border: none;
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+}
+
+.social-button-img {
+    height: 100%;
+    width: 100%;
 }
 
 .thumbnail {
@@ -1097,8 +1117,9 @@ nav a:hover {
 .slide-text {
   position: relative;
   font-size: 2em;
-  width: 55%;
-  letter-spacing: 0.03em;
+  width: 65%;
+  letter-spacing: 0.035em;
+  line-height: 130%;
   opacity: 0; /* Start with hidden text */
   animation-duration: 2s;
   animation-fill-mode: forwards;
@@ -1130,11 +1151,11 @@ nav a:hover {
 
 @keyframes slide-left {
   from {
-    transform: translateX(-52vw);
+    transform: translateX(-48vw);
     opacity: 0;
   }
   to {
-    transform: translateX(38vw);
+    transform: translateX(33vw);
     opacity: 1;
   }
 }
@@ -1152,7 +1173,7 @@ nav a:hover {
 
 @keyframes slide-bottom {
   from {
-    transform: translateY(100vh);
+    transform: translateY(40vh);
     opacity: 0;
   }
   to {
