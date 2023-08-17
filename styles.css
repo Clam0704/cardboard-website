@@ -31,6 +31,11 @@ h2 {
     font-size: 4vw;
 }
 
+h3 {
+  text-align: center;
+  font-size: 3vw;
+}
+
 iframe {
     width: 45vw; 
     height: 25vw;
@@ -320,9 +325,11 @@ nav a:hover {
 }
 
 #profile_pic {
-    width: 300px; /* Adjust the width and height as needed */
-    height: 300px;
-    border-radius: 50%; /* Crop the image into a circle */
+    width: 50vw; /* Adjust the width and height as needed */
+    height: 30vw;
+    border-radius: 2vw; /* Crop the image into a circle */
+    margin-bottom: calc(2vw + 1vh);
+    margin-top: calc(1vw + 0.5vh);
 }
 
 #profile {
@@ -1078,4 +1085,78 @@ nav a:hover {
         -webkit-filter: drop-shadow(0 0 1.5vw #ffffff); /* Gradually increase the blur radius */
         filter: drop-shadow(0 0 1vw #ffffff); /* End with the desired drop shadow */
     }
+}
+
+.slide-container {
+  display: grid;
+  height: 30%; /* Set the desired height */
+  width: 100%;
+  overflow: hidden;
+}
+
+.slide-text {
+  position: relative;
+  font-size: 2em;
+  width: 55%;
+  letter-spacing: 0.03em;
+  opacity: 0; /* Start with hidden text */
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  animation-play-state: paused;
+}
+
+.slide-left {
+  animation-name: slide-left;
+  text-align: right;
+}
+
+.slide-right {
+  animation-name: slide-right;
+}
+
+.slide-bottom {
+  animation-name: slide-bottom;
+  text-align: center;
+  width: 100%;
+  position: relative;
+  font-size: 2em;
+  opacity: 1; /* Start with hidden text */
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  animation-play-state: paused;
+}
+
+@keyframes slide-left {
+  from {
+    transform: translateX(-52vw);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(38vw);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-right {
+  from {
+    transform: translateX(90vw);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(1vw);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-bottom {
+  from {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0vh);
+    opacity: 1;
+  }
 }
