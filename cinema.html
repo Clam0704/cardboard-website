@@ -39,7 +39,7 @@
         </nav>
     </div>
     <div>
-        <div style="display: flex; height: 45vw; padding-top: 1vw; z-index: -8;">
+        <div style="display: flex; height: 45vw; padding-top: calc(2vw + 2vh); z-index: -8;">
             <div style="display: grid; padding-left: 1.25vw; -webkit-filter: drop-shadow(0 0 0.5vw #ffffff);filter: drop-shadow(0 0 0.5vw #ffffff);">
                 <div style="border-radius: calc(1vw + 1vh); box-sizing: border-box; outline: 0.5vw solid gray; z-index: -10; grid-area: 1 / 1; height: 44vw;"></div>
                 <video class="cinemaVideo" id="videoPlayer" style="grid-area: 1 / 1;" muted paused autobuffer>
@@ -70,6 +70,13 @@
                 <div id="video-collection-cinema" class="video-collection-cinema"></div>
             </div>
         </div>
+    </div>
+    <div>
+        <p style="font-size: 2vw; padding-left: 1vw;">
+            Please note that the cinema window is intended for use with a landscape-oriented device and a strong internet connection.
+            If a video does not play as expected, it can be found in the <a style="text-decoration: none; font-weight: bold; filter: drop-shadow(0 0 0.1vw #ffffff);" href="/films.html">Films</a> or <a style="text-decoration: none; font-weight: bold; filter: drop-shadow(0 0 0.1vw #ffffff);" href="/visuals.html">Visuals</a> sections.<br>
+
+        </p>
     </div>
     
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

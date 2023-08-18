@@ -13,12 +13,26 @@ const visualSources = [
   'MID OCEAN .mp4',
   'Abstrkt Replace Mode.mp4',
   'Two Dangers THE WARNINGS.mp4',
+  '2Karm.mp4',
+  'between and beyond.mp4',
+  'never mind the.mp4',
+  'nurture.mp4',
+  'RIPDOOM.mp4',
+  'thats all folks.mp4',
+  'what.mp4',
 ];
 
 const visualSourcesThumbnails = [
   'MID OCEAN.jpg',
   'Abstrkt Replace Mode.jpg',
   'Two Dangers THE WARNINGS.jpg',
+  '2Karm.jpg',
+  'between and beyond.jpg',
+  'never mind the.jpg',
+  'nurture.jpg',
+  'RIPDOOM.jpg',
+  'thats all folks.jpg',
+  'what.jpg',
 ];
 
 const filmSources = [

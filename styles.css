@@ -425,6 +425,7 @@ nav a:hover {
     justify-content: start;
     position: relative;
     overflow: hidden;
+    margin-bottom: calc(1vw + 1.vh);
   }
   
   .slider__wrapper {
@@ -628,7 +629,6 @@ nav a:hover {
   }
   
   .hero {
-    font-size: 3vw;
     display: flex;
     color: #fff;
     z-index: 2;
@@ -1080,6 +1080,7 @@ nav a:hover {
   .hero-container h1 {
     padding-left: 1vw;
     margin: 0;
+    font-size: 3vw;
   }
   
 #scrollLeftBtn {
@@ -1087,6 +1088,8 @@ nav a:hover {
     height: 2vw;
     width: 3vw;
     align-self: center;
+    font-weight: bolder;
+    font-size: 1.5vw;
 }
 
 #scrollRightBtn {
@@ -1094,6 +1097,8 @@ nav a:hover {
     height: 2vw;
     width: 3vw;
     align-self: center;
+    font-weight: bolder; 
+    font-size: 1.5vw;
 }
 
 @keyframes blurAnimation {
@@ -1117,7 +1122,7 @@ nav a:hover {
 .slide-text {
   position: relative;
   font-size: 2em;
-  width: 65%;
+  width: 75%;
   letter-spacing: 0.035em;
   line-height: 130%;
   opacity: 0; /* Start with hidden text */
@@ -1155,7 +1160,7 @@ nav a:hover {
     opacity: 0;
   }
   to {
-    transform: translateX(33vw);
+    transform: translateX(23vw);
     opacity: 1;
   }
 }
@@ -1181,3 +1186,123 @@ nav a:hover {
     opacity: 1;
   }
 }
+
+
+@media (max-width: 768px) {
+
+  .hero-container {
+    grid-area: 1 / 1;
+    width: 100vw;
+    display: flex;
+    align-content: center;
+  }
+
+  .hero-container h1 {
+    padding-left: 2vw;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    font-size: 10.25vw;
+  }
+
+  .nav-bar {
+    grid-area: 2 / 1;
+    width: 100%;
+  }
+  
+  .custom-nav-home {
+    display: grid;
+  }
+
+  .custom-nav {
+    display: grid;
+  }
+
+  .social-buttons-container {
+    grid-area: 3 / 1;
+    width: 40%;
+    justify-self: center;
+  }
+
+  nav a {
+    text-decoration: none;
+    color: #fff;
+    padding-left: 5vw;
+    font-size: 5vw;
+    -webkit-filter: drop-shadow(0 0 0.1vw #ffffff);
+    filter: drop-shadow(0 0 0.1vw #ffffff);
+  }
+
+  .social-button {
+    margin-left: 0.35vw;
+    border-radius: 0.1em;
+    background: none;
+    border: none;
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+  }
+
+  .social-button-img {
+      height: 100%;
+      width: 100%;
+  }
+
+  #scrollLeftBtn {
+    left: 1vw;
+    height: 4vw;
+    width: 6vw;
+    align-self: center;
+    font-weight: bolder;
+    font-size: 2.5vw;
+  }
+
+  #scrollRightBtn {
+    right: 1vw;
+    height: 4vw;
+    width: 6vw;
+    align-self: center;
+    font-weight: bolder; 
+    font-size: 2.5vw;
+  }
+
+  h1 {
+    font-size: 5vw;
+  }
+  
+  .video-collection-item {
+    flex: 0 0 calc(100%);
+    flex-direction: column;
+    word-break: break-word;
+    align-items: flex-start;
+    padding-bottom: calc(3vw + 2vh);
+    justify-content: flex-start;
+  }
+
+  .video-collection-iframe {
+    width: 90vw;
+    height: 50vw;
+    padding-left: 3.5vw;
+  }
+
+
+  .embedDesc {
+    margin-top: 1vw;
+    font-size: 2.5vw;
+    width: 90%;
+    margin-left: 4vw;
+    white-space: normal; 
+    overflow-wrap: break-word; 
+    word-wrap: break-word;
+    white-space: normal; 
+}
+
+  .embedTitle {
+    margin-top: 0;
+    margin-bottom: 0;;
+    font-size: 4vw;
+    white-space: normal; 
+    overflow-wrap: break-word; 
+    word-wrap: break-word;
+  }
+ }
