@@ -7,7 +7,7 @@ body, ul {
 }
 
 body {
-    font-family: 'Unica One', sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     overflow-x: hidden;
     max-width: 100%;
 }
@@ -120,6 +120,12 @@ nav a:hover {
     display: inherit;
 }
 
+.credits {
+  font-size: 1.25vw;
+  margin: 1.5vw;
+  text-align: right;
+}
+
 .current:hover {
     font-style:normal;
 }
@@ -137,6 +143,7 @@ nav a:hover {
     z-index: 3;
     height: calc(6vh+5vw);
     align-items: flex-end;
+    font-family: 'Unica One', sans-serif;
 }
 
 /* Style the navigation bar */
@@ -152,6 +159,7 @@ nav a:hover {
     padding-right: 3vh;
     height: calc(6vh+5vw);
     z-index: 20;
+    font-family: 'Unica One', sans-serif;
     align-items: flex-end;
 }
 
@@ -162,13 +170,35 @@ nav a:hover {
     overflow-wrap: break-word; 
     word-wrap: break-word;
     white-space: normal; 
+    margin-top: 1vw;
+    margin-left: 1vw;
 }
 
 .embedTitle {
+    margin-bottom: 0;
     font-size: 2vw;
     white-space: normal; 
     overflow-wrap: break-word; 
     word-wrap: break-word;
+}
+
+.embedTitleHome {
+    margin-bottom: 0;
+    font-size: 2vw;
+    white-space: normal; 
+    overflow-wrap: break-word; 
+    word-wrap: break-word;
+}
+
+.embedDescHome {
+    font-size: 1.5vw;
+    width: 100%;
+    white-space: normal; 
+    overflow-wrap: break-word; 
+    word-wrap: break-word;
+    white-space: normal; 
+    margin-top: 1vw;
+    margin-left: 1vw;
 }
 
 .fullscreen-button {
@@ -194,6 +224,7 @@ nav a:hover {
     display: flex;
     align-items: center; /* Vertical alignment */
     justify-content: center; /* Horizontal alignment */
+    font-family: 'Unica One', sans-serif;
 }
 
 .overlaySub {
@@ -338,7 +369,7 @@ nav a:hover {
     scroll-behavior:smooth;
     scrollbar-color: rgb(38, 0, 255);
     scrollbar-width: 5vw;
-    height: 45vw;
+    height: 40vw;
     width: 100vw;
     z-index: 100;
     padding-left: 1vw
@@ -1081,6 +1112,7 @@ nav a:hover {
     padding-left: 1vw;
     margin: 0;
     font-size: 3vw;
+    font-family: 'Unica One', sans-serif;
   }
   
 #scrollLeftBtn {
@@ -1090,6 +1122,7 @@ nav a:hover {
     align-self: center;
     font-weight: bolder;
     font-size: 1.5vw;
+    margin-right: 1vw;
 }
 
 #scrollRightBtn {
@@ -1126,9 +1159,8 @@ nav a:hover {
   letter-spacing: 0.035em;
   line-height: 130%;
   opacity: 0; /* Start with hidden text */
-  animation-duration: 2s;
+  animation-duration: 1.5s;
   animation-fill-mode: forwards;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
   animation-play-state: paused;
 }
 
@@ -1148,9 +1180,8 @@ nav a:hover {
   position: relative;
   font-size: 2em;
   opacity: 1; /* Start with hidden text */
-  animation-duration: 2s;
+  animation-duration: 1.5s;
   animation-fill-mode: forwards;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
   animation-play-state: paused;
 }
 
@@ -1185,7 +1216,7 @@ nav a:hover {
 
 @keyframes slide-bottom {
   from {
-    transform: translateY(40vh);
+    transform: translateY(10vh);
     opacity: 0;
   }
   to {
@@ -1262,6 +1293,7 @@ nav a:hover {
     align-self: center;
     font-weight: bolder;
     font-size: 2.5vw;
+    margin-right: 1vw;
   }
 
   #scrollRightBtn {
@@ -1313,6 +1345,26 @@ nav a:hover {
     word-wrap: break-word;
   }
 
+  .embedTitleHome {
+    margin-bottom: 0;
+    margin-top: 1.5vw;
+    font-size: 2.75vw;
+    white-space: normal; 
+    overflow-wrap: break-word; 
+    word-wrap: break-word;
+  }
+
+  .embedDescHome {
+      font-size: 2.25vw;
+      width: 100%;
+      white-space: normal; 
+      overflow-wrap: break-word; 
+      word-wrap: break-word;
+      white-space: normal; 
+      margin-top: 1vw;
+      margin-left: 1vw;
+  }
+
   .slide-text {
     font-size: 1.25rem;
     width: 90%;
@@ -1328,6 +1380,11 @@ nav a:hover {
 
   figure {
     margin:0;
+  }
+
+  .credits {
+    font-size: 3vw;
+    margin-top: 12vw;
   }
 
   @keyframes slide-left {
