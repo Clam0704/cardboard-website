@@ -1156,7 +1156,6 @@ nav a:hover {
   position: relative;
   font-size: 2em;
   width: 70%;
-  letter-spacing: 0.035em;
   line-height: 130%;
   opacity: 0; /* Start with hidden text */
   animation-duration: 1.5s;
