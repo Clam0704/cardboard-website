@@ -1,7 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <script>
-        if (window.location.pathname === "/") {
-          window.location.replace("/home.html");
-        }
-      </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=yes">
+    <title>cardboard</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/icons/cardboard_fav.png">
+    <meta property="og:title" content="Jules Stockwell Film">
+    <meta property="og:description" content="Video Editor / Vision Mixer / Director / Filmmaker">
+    <meta property="og:image" content="https://i.ibb.co/yNCZPLt/julesprofilepic.jpg">
+    <meta property="og:url" content="http://www.julesstockwellfilm.com">
+    <meta property="og:type" content="website">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Unica+One&display=swap">
 </head>
+<body class="backgroundContent">
+    <div class="custom-nav-home">
+        <div class="social-buttons-container">
+            <button onclick="window.location.href = 'mailto:cardboard.image@gmail.com'" class="social-button">
+                <img class="social-button-img" src="assets/images/icons/email.png">
+            </button>
+            <button onclick="window.open('https://youtube.com/@CardboardBloke2000', '_blank')" class="social-button">
+                <img class="social-button-img" src="assets/images/icons/youtube.png">
+            </button>
+            <button onclick="window.open('https://www.instagram.com/_cardboard._/', '_blank')" class="social-button">
+                <img class="social-button-img" src="assets/images/icons/instagram.png">
+            </button>
+            <button onclick="window.open('https://www.linkedin.com/in/jules-stockwell-607942252', '_blank')" class="social-button">
+                <img class="social-button-img" src="assets/images/icons/linkedin.png">
+            </button>
+        </div>
+        <div class="hero-container">
+            <h1 class="hero glitch layers" data-text="Bules Bockwell Bilms">
+                <span><a href="/">Jules Stockwell Films</a></span>
+            </h1>
+        </div>
+        <nav class="nav-bar">
+            <a class="current" style="font-weight:bold; filter: drop-shadow(0 0 0.25vw); -webkit-filter: drop-shadow(0 0 0.25vw);" href="/">Home</a>
+            <a href="/films.html">Films</a>
+            <a href="/visuals.html">Visuals</a>
+            <a href="/cinema.html">Cinema</a>
+            <a href="/about.html">About</a>
+        </nav>
+    </div>
+
+    <div class="slider">
+        <div class="slider__wrapper">
+            <input type="checkbox" id="slider-checkbox" style="grid-area: 1 / 1; z-index: 18;" checked> 
+            <img id="slider-checkbox-icon" src="/assets/images/icons/right-arrow.png" type="image/jpg"></imgsrc>
+            <div class="slider__panel slider__panel--left" style="height: 100%;">
+                <!-- <div style="grid-area: 1 / 1; position: absolute; padding-left: calc(2.5vw + 1vh); padding-top: calc(0.25vw + 0.25vh); font-size: 2vw; text-shadow: 0 0 2vw #000000; opacity: 0.7; text-decoration: none; display: inline-flex; color: white; z-index: 15;">
+                    <p style="color: white;">
+                        <a style = "color: white;" href="https://www.instagram.com/_cardboard._/" target="_blank">
+                            @_cardboard._
+                        </a>
+                    </p>
+                </div>   -->
+                <div id="overlayMain" class="overlayMain" style="grid-area: 1 / 1; width: 100%; height: 100%; position: absolute;">
+                    <p data-target-resolver ></p>
+                </div>
+                <video id="background-video" autoplay loop muted style="grid-area: 1 / 1;">
+                    <!-- Include the video files in different formats -->
+                    <source src="/assets/videos/other videos/home page.mp4" type="video/mp4">
+                    <!-- Add more source elements for other formats if needed -->
+                    Your browser does not support the video tag.
+                </video>
+            </div> <!-- slider__panel -->
+            <div class="slider__panel slider__panel--right" style="height: 100%;">
+                <div style="display: table-cell; flex: 1;">
+                    <video id="displayVideo1" style="padding: 1vw; padding-top: 1vw; border-radius: calc(1vh + 1vw); grid-area: 1 / 1;" loop muted width="98%">
+                        <!-- Include the video files in different formats -->
+                        <source src="/assets/videos/other videos/Video_1.MOV" type="video/mp4">
+                        <!-- Add more source elements for other formats if needed -->
+                        Your browser does not support the video tag.
+                    </video>
+                    
+                    <div id="displayVideo1Text" class="overlaySub" style="position: absolute; top: 2vw; left: 8vw; width: 50vw;  font-size: 2.5vw;">
+                        <p>
+                            As well as <a href="/films.html" >short films</a>, I make abstract video art collages.<br>
+                            These are visual only, and are meant to be played while listening to music.
+                        </p>
+                    </div>
+    
+                    <img id="displayImage1" src="/assets/images/other images/image0.jpeg" type="image/jpeg" style="padding: 1vw; border-radius: 10%; grid-area: 1 / 1;" width="39.5%"> </img>
+                    <div id="displayImage1Text" class="overlaySub" style="position: absolute; top: 39vw; left: 6vw; width: 20vw; font-size: 1.5vw;">
+                        <p>
+                            Some visuals are commissioned for events, or by artists. <br>
+                            Pictured are <a href="https://www.instagram.com/stories/highlights/18225777319197901/" target="_blank">7-hour visuals</a> I made for <a href="https://www.instagram.com/lockedin_mcr/" target="_blank">Locked In</a> at <a href="https://www.instagram.com/thisisgorilla/">Gorilla</a>, Manchester (April 8th, 2023). 
+                        </p>
+                    </div>
+    
+                    <video id="displayVideo2" style="padding: 0.5vw; border-radius: calc(1vh + 1vw)" loop muted width="53.5%">
+                    <!-- Include the video files in different formats -->
+                        <source src="/assets/videos/other videos/Video.MOV" type="video/mp4">
+                    <!-- Add more source elements for other formats if needed -->
+                    Your browser does not support the video tag.
+                    </video>
+                    <div id="displayVideo2Text" class="overlaySub" style="position: absolute; top: 39vw; left: 35.5vw; width: 30vw; font-size: 2vw;">
+                        <p>
+                            Now taking commissions for music videos, lyric videos, video art. <br>
+                            Visit <a href="/about.html">ABOUT</a> page for my email, to discuss terms and fees.
+                        </p>
+                    </div>
+    
+                </div>
+                <video id="displayVideo3" style="padding: 1vw; border-radius: calc(2vh + 2vw)" loop muted width="32.5%" >
+                <!-- Include the video files in different formats -->
+                    <source src="/assets/videos/other videos/Video_2.MOV" type="video/mp4">
+                <!-- Add more source elements for other formats if needed -->
+                Your browser does not support the video tag.
+                </video>
+                <div id="displayVideo3Text" class="overlaySub" style="position: absolute; top: 4vw; left: 73vw; width: 24vw; font-size: 2.5vw">
+                    Movement is random and the compositions are unstable, <br>
+                    Making the visuals appear to synchronise with virtually any track. 
+                </div>
+            </div> <!-- slider__panel -->
+        </div> <!-- slider__wrapper -->
+    </div> <!-- slider -->
+
+    <div style="display: flex;">
+        <h1 style="padding-right: 2vw; font-family: 'Unica One', sans-serif; font-size: 4vw;">Top videos</h1>
+        <button id="scrollLeftBtn">&lt;</button>
+        <button id="scrollRightBtn">&gt;</button>
+    </div>
+    
+    <div id="gallery">
+        <div class="video-component">
+            <iframe src="https://www.youtube.com/embed/PvRBP0zNASs?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen="true" loading="lazy" ></iframe>
+            <div class="caption">
+                <h3 class="embedTitleHome">LIVING THE DREAM: passive observer in a dreamscape</h3>
+                <p class="embedDescHome">(Living with people who work a lot)</p>
+            </div>
+        </div>
+
+        <div class="video-component">
+            <iframe src="https://www.youtube.com/embed/65sdD-3jTcY?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen="true" loading="lazy"></iframe>
+            <div class="caption">
+                <h3 class="embedTitleHome">'CREATIVITY'</h3>
+                <p class="embedDescHome">cramboardopeningbottlecasestringtheparticularniche.</p>
+            </div>
+        </div>
+
+        <div class="video-component">
+            <iframe src="https://www.youtube.com/embed/0AJAl4ezf-0?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen="true" loading="lazy"></iframe>
+            <div class="caption">
+                <h3 class="embedTitleHome">R I P D O O M</h3>
+                <p class="embedDescHome">Music video for 'Ripdoom' - DJ Praeda</p>
+            </div>
+        </div>
+
+        <div class="video-component">
+            <iframe src="https://www.youtube.com/embed/NuEAp5LMEXU?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen="true" loading="lazy"></iframe>
+            <div class="caption">
+                <h3 class="embedTitleHome">Two Dangers: THE WARNINGS</h3>
+                <p class="embedDescHome">Some visuals I came up with. Add your own music.</p>
+            </div>
+        </div>
+
+        <div class="video-component">
+            <iframe src="https://www.youtube.com/embed/wno9CgXPtyU?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen="true" loading="lazy"></iframe>
+            <div class="caption">
+                <h3 class="embedTitleHome">N U R T U R E</h3>
+                <p class="embedDescHome">First visuals of 2022. Add your own music x</p>
+            </div>
+        </div>
+    </div>
+    <div class="credits">
+        Website designed and built by <a style="text-decoration: none; font-weight: bold;" href="https://www.linkedin.com/in/callum-n-may/">Callum May</a>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="scripts/animateOverlayMain.js"></script>
+    <!-- <script src="scripts/animateTitle.js"></script> -->
+    <script src="scripts/animateBackground.js"></script>
+    <script src="scripts/animateDisplayVideoText.js"></script>
+
+</body>
+</html>
